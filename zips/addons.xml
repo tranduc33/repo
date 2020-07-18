@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.PhimBoYoutube" name="Phim Bo YouTube" version="0.1.3" provider-name="teamVIB">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube"/>
+    <import addon="script.module.web-pdb" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <summary lang="en">Xem Phim Bo Youtube</summary>
+    <description lang="en">Xem hàng chục ngàn phim bộ được ngữ sang tiếng Việt. Nguồn từ YouTube
+	</description>
+    <disclaimer lang="en">
+    	[COLOR red]Thank you to TVADDONS[/COLOR]
+    </disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.vietipbox" name="VIB Repo" version="0.0.6" provider-name="Son Tranduc">
+    <extension point="xbmc.addon.repository" name="VIB Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/tranduc33/repo/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/tranduc33/repo/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/tranduc33/repo/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
