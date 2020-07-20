@@ -48,7 +48,7 @@ def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Dai Loan[/COLOR]','url',13,art + 'tw.png')
 		addDIR('[COLOR goldenrod]Phim Bo An Do[/COLOR]','url',14,art + 'ad.png')
 		addDIR('[COLOR goldenrod]Phim Bo Thai Lan[/COLOR]','url',15,art + 'tl.png')
-		addDIR('[COLOR goldenrod]Phim Bo Nhat Ban[/COLOR]','url',17,art + 'nb.png')
+		#addDIR('[COLOR goldenrod]Phim Bo Nhat Ban[/COLOR]','url',17,art + 'nb.png')
 		addDIR('[COLOR goldenrod]Phim Bo Viet Nam[/COLOR]','url',18,art + 'vn.png')
 		#addDIR('[COLOR blue]youtube-dl Control[/COLOR]','url',16,art + 'youtube-dlControl.png')
 		logo = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube','logo.png'))
