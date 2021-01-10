@@ -50,6 +50,7 @@ def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Thai Lan[/COLOR]','url',15,art + 'tl.png')
 		#addDIR('[COLOR goldenrod]Phim Bo Nhat Ban[/COLOR]','url',17,art + 'nb.png')
 		addDIR('[COLOR goldenrod]Phim Bo Viet Nam[/COLOR]','url',18,art + 'vn.png')
+		addDIR('[COLOR goldenrod]Phim Bo TVB[/COLOR]','url',19,art + 'tvb.png')
 		#addDIR('[COLOR blue]youtube-dl Control[/COLOR]','url',16,art + 'youtube-dlControl.png')
 		logo = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube','logo.png'))
 		xbmcgui.Dialog().notification('Phim YouTube','Only in VIET IP BOX',logo,5000,False)
@@ -118,6 +119,14 @@ def VietNam():
 	write_keyword_to_file(keyword_path, keyword)
 
 	build_dir(keyword, 18, page)
+
+def TVB():
+	keyword = "kenh+tvb+tieng+viet"
+
+	# save keyword to file
+	write_keyword_to_file(keyword_path, keyword)
+
+	build_dir(keyword, 19, page)
 
 def youtube_dl():
 	xbmc.executebuiltin("RunAddon(script.module.youtube.dl)")
@@ -281,5 +290,8 @@ elif mode==17:
 
 elif mode==18:
 		VietNam()
+
+elif mode==19:
+		TVB()
 				
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
