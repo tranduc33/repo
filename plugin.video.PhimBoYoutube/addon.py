@@ -45,12 +45,13 @@ def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Han Quoc[/COLOR]','url',11,art + 'hq.png')
 		addDIR('[COLOR goldenrod]Phim Bo Trung Quoc[/COLOR]','url',12,art + 'tq.png')
 		addDIR('[COLOR goldenrod]Phim Bo Hong Kong[/COLOR]','url',10,art + 'hk.png')
+		addDIR('[COLOR goldenrod]Phim Bo TVB (old)[/COLOR]','url',19,art + 'tvb.png')
 		addDIR('[COLOR goldenrod]Phim Bo Dai Loan[/COLOR]','url',13,art + 'tw.png')
 		addDIR('[COLOR goldenrod]Phim Bo An Do[/COLOR]','url',14,art + 'ad.png')
 		addDIR('[COLOR goldenrod]Phim Bo Thai Lan[/COLOR]','url',15,art + 'tl.png')
 		#addDIR('[COLOR goldenrod]Phim Bo Nhat Ban[/COLOR]','url',17,art + 'nb.png')
 		addDIR('[COLOR goldenrod]Phim Bo Viet Nam[/COLOR]','url',18,art + 'vn.png')
-		addDIR('[COLOR goldenrod]Phim Bo TVB[/COLOR]','url',19,art + 'tvb.png')
+		
 		#addDIR('[COLOR blue]youtube-dl Control[/COLOR]','url',16,art + 'youtube-dlControl.png')
 		logo = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube','logo.png'))
 		xbmcgui.Dialog().notification('Phim YouTube','Only in VIET IP BOX',logo,5000,False)
@@ -166,7 +167,7 @@ def build_dir(keyword, mode, page):
 						#thumbnail = art+'movies.png'
 						addDIR(title,playlistid,1,thumbnail)
 			if totalpages > 1 and (page+1) <= totalpages:
-				addDir('[B]'+translate(30010)+'[/B] '+str(page+1)+'/'+str(totalpages),playlistid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
+				addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playlistid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
 
 
 def get_params():

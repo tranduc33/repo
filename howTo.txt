@@ -1,0 +1,7 @@
+
+- Change a new version for new modifed addon (in order for Kodi to recognize an updated addon)
+- Replace the old addon with the new one
+- Run _repo_xml_generator.py
+- Use Github Desktop to push into Github
+
+It will take several hours to get effective.
