@@ -12,8 +12,8 @@
 			<ondown condition="!Control.IsVisible(90020) | !Skin.HasSetting(centermainmenu)">9000</ondown>
 			<pagecontrol />
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
-			<focusposition>2</focusposition>
-			<movement>2</movement>
+			<focusposition>1</focusposition>
+			<movement>1</movement>
 			<orientation>horizontal</orientation>
 			<itemlayout height="87" width="344">
 				<control type="label">
