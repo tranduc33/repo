@@ -41,6 +41,7 @@ if  (str(KEY) == ""):
 	sys.exit()
 	
 
+
 def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Han Quoc[/COLOR]','url',11,art + 'hq.png')
 		addDIR('[COLOR goldenrod]Phim Bo Trung Quoc[/COLOR]','url',12,art + 'tq.png')
@@ -167,7 +168,7 @@ def build_dir(keyword, mode, page):
 						#thumbnail = art+'movies.png'
 						addDIR(title,playlistid,1,thumbnail)
 			if totalpages > 1 and (page+1) <= totalpages:
-				addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playlistid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
+				addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playlistid,mode,os.path.join(artfolder,'next.png'),page,1,token=nextpagetoken)
 
 
 def get_params():
