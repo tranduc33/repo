@@ -2,7 +2,7 @@
 <includes>
 	<!-- Horizontal -->
 	<include name="HorizontalSubMenu">
-		<control type="fixedlist" id="9010">
+		<control type="fixedlist" id="9010">			
 			<left>100</left>
 			<width>1720</width>
 			<height>50</height>
@@ -280,7 +280,8 @@
 				<texture colordiffuse="$VAR[ThemeHomeMenuGlowBarColor]">separator_horizontal.png</texture>
 			</control>
 			<control type="group" id="9001">
-				<top>162</top>
+				<top>-162</top>
+				
 				<include condition="[String.IsEmpty(Skin.String(HorizontalRSSPosition)) | !String.IsEmpty(Skin.String(HorizontalRSSPosition)) + !Skin.HasSetting(Enable.VisibleSubmenu)] + system.getbool(lookandfeel.enablerssfeeds) | [!system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(Enable.VisibleSubmenu)]">SubMenuAnimation</include>
 				<control type="image">
 					<width>100%</width>
@@ -518,21 +519,22 @@
 	</include>
 	<!-- Layouts -->
 	<include name="MainMenuListContent">
-		<left>-290</left>
+		<!-- <left>-290</left>  -->
+		<left>90</left>
 		<top>62</top>
 		<width>2800</width>
 		<height>100</height>
-		<onleft>9000</onleft>
-		<onright>9000</onright>
+		<!-- <onleft>9000</onleft>
+		<onright>9000</onright> -->
 		<movement>1</movement>
-		<scrolltime tween="quadratic" easing="out">300</scrolltime>
+	    <scrolltime tween="quadratic" easing="out">300</scrolltime> 
 		<include condition="String.IsEqual(Skin.String(MainMenu.Layout),icons)">FocusPosition4</include>
 		<include condition="!String.IsEqual(Skin.String(MainMenu.Layout),icons)">FocusPosition2</include>
-		<orientation>horizontal</orientation>
+		<orientation>horizontal</orientation> <!--
 		<animation effect="slide" start="0" end="-350,0" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),3)">Conditional</animation>
 		<animation effect="slide" start="0" end="126,0" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),icons)">Conditional</animation>
 		<animation effect="slide" start="0" end="0,20" time="320" tween="cubic" easing="inout" condition="String.IsEqual(Skin.String(MainMenu.Layout),icons) + Skin.HasSetting(Disable.IconsMenuLabel)">Conditional</animation>
-		<animation effect="slide" end="-0,5" condition="String.IsEqual(Skin.Font,$LOCALIZE[31483])">Conditional</animation>
+		<animation effect="slide" end="-0,5" condition="String.IsEqual(Skin.Font,$LOCALIZE[31483])">Conditional</animation> -->
 		<onup condition="Control.IsVisible(9027)">9020</onup>
 		<onup condition="Control.IsVisible(90010) + !Control.IsVisible(9027)">90010</onup>
 		<onup condition="!Control.IsVisible(90010) + Control.IsVisible(90020) + !Control.IsVisible(9027) + !Skin.HasSetting(centermainmenu)">90020</onup>
@@ -540,9 +542,9 @@
 		<ondown condition="!String.IsEqual(Container(9000).ListItem.Property(hasSubmenu),True) + Skin.HasSetting(centermainmenu) + Control.IsVisible(90020)">90020</ondown>
 		<onback condition="Skin.HasSetting(Home.Hide) + !Player.Playing">SetFocus(64)</onback>
 		<pagecontrol />
-		<itemlayout height="100" width="500" condition="String.IsEmpty(Skin.String(MainMenu.Layout))">
+		<itemlayout height="100" width="350" condition="String.IsEmpty(Skin.String(MainMenu.Layout))">
 			<control type="label">
-				<width>500</width>
+				<width>350</width>
 				<height>90</height>
 				<font>font_MainMenu</font>
 				<textcolor>$VAR[UnfocusedMainMenuColor]</textcolor>
@@ -550,9 +552,9 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
-		<focusedlayout height="100" width="500" condition="String.IsEmpty(Skin.String(MainMenu.Layout))">
+		<focusedlayout height="100" width="350" condition="String.IsEmpty(Skin.String(MainMenu.Layout))">
 			<control type="label">
-				<width>500</width>
+				<width>350</width>
 				<height>90</height>
 				<font>font_MainMenu</font>
 				<textcolor>$VAR[UnfocusedMainMenuColor]</textcolor>
@@ -560,7 +562,7 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
-				<width>500</width>
+				<width>350</width>
 				<height>90</height>
 				<font>font_MainMenu</font>
 				<textcolor>$VAR[FocusedMainMenuColor]</textcolor>
