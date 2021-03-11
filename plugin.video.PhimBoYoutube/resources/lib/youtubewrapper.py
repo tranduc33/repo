@@ -171,7 +171,7 @@ def return_youtubevideos(name,url,token,page,keyword):
 		add_sort_methods()
 
 	if totalpages > 1 and (page+1) <= totalpages:
-		addDir('[B]'+translate(30010)+'[/B] '+str(page+1)+'/'+str(totalpages),url,1,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
+		addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),url,1,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
 
 	#import web_pdb; web_pdb.set_trace()
 	xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
@@ -194,7 +194,7 @@ def play_youtube_video(url):
 	player.play(video_url,item)
 	for i in range(0, 100):
 		dlg.update(i)
-		xbmc.sleep(50)
+		xbmc.sleep(100)
 
 		#if dlg.iscanceled(): 
 		#	dialog.textviewer("CANCEL")
