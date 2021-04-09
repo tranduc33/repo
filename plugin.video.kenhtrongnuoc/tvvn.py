@@ -176,9 +176,19 @@ def play_link(chn, src):
         if data['channels'][chn]['src']['playpath'] == "vtc":
 			full_url = data['channels'][chn]['src']['page_url']
 
+        #parse vchannel
+        if data['channels'][chn]['src']['playpath'] == "vchannel":
+            url = data['channels'][chn]['src']['page_url']
+            full_url = parse_vchannel(url)
 
         d_progress.close()
-        xbmc.Player().play(full_url)
+
+        #dialog = xbmcgui.Dialog()
+        #dialog.textviewer('Plot',full_url )
+
+        ok = xbmc.Player().play(full_url)
+
+
         return
 
 KEY = get_key()
@@ -196,8 +206,6 @@ def Init():
         #         update_chn_list()
 
 if mode==None:
-        #dialog = xbmcgui.Dialog()
-        #dialog.textviewer("Warning!",result)
         Init()
 elif mode==1:
         play_link(chn, src)

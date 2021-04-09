@@ -98,3 +98,8 @@ def parse_101vn(url):
     #convert string to list
     li = list(response.split("\n"))[3]
     return li
+
+#parse vchannel
+def parse_vchannel(url):
+    res = requests.get(url)
+    return re.findall(r"source:\"(http://tna6.+?m3u8)\"", res.text)[0]

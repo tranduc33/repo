@@ -5,9 +5,15 @@
             "logo":  "",
             "desc": "root menu",
             "content": [          
-            {"type":"chn","id":"vtc_vinhlong"},          
+            {"type":"chn","id":"vtc_vinhlong"},  
+            {"type":"chn","id":"Vcab7"},         
             {"type":"chn","id":"vtc_dongthap"},
-            {"type":"chn","id":"vtc_dongnai"},      
+            {"type":"chn","id":"vtc_dongnai"},  
+            {"type":"chn","id":"vtc1"},
+            {"type":"chn","id":"vtc6"},
+            {"type":"chn","id":"vtc9"},
+            {"type":"chn","id":"vtc10"}, 
+            {"type":"chn","id":"vtc14"},
             {"type":"chn","id":"vtvgo_vtv1"},
             {"type":"chn","id":"vtvgo_vtv2"},
             {"type":"chn","id":"vtvgo_vtv3"},
@@ -17,8 +23,7 @@
             {"type":"chn","id":"vtvgo_vtv7"},
             {"type":"chn","id":"vtvgo_vtv8"},
             {"type":"chn","id":"vtvgo_vtv9"},
-            {"type":"chn","id":"vtvgo_vtv52"},
-            {"type":"chn","id":"vtc1"}
+            {"type":"chn","id":"vtvgo_vtv52"}           
             ]
         }
     },
@@ -241,6 +246,8 @@
 
 
 
+
+
         "vtc1": {
             "title": "VTC1",
             "logo": "vtc1.png",
@@ -249,6 +256,59 @@
                 "id":"vtc",
                 "playpath": "vtc",
                 "page_url": "https://vtc130121.cdn.vnns.io/VTC1_abr/vtc130121/VTC1_720p/chunks.m3u8"
+            }
+        },
+        "vtc6": {
+            "title": "VTC6",
+            "logo": "vtc6.png",
+            "desc": "Kênh Phim truyện tổng hợp",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC6/chunks.m3u8"
+            }
+        },
+        "vtc9": {
+            "title": "VTC9",
+            "logo": "vtc9.png",
+            "desc": "Văn hóa, Xã hội, Giải trí",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC9_abr/vtc130121/VTC9_720p/chunks.m3u8"
+            }
+        },
+        "vtc10": {
+            "title": "VTC10",
+            "logo": "vtc10.png",
+            "desc": "NET VIET",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC10_abr/vtc130121/VTC10_720p/chunks.m3u8"
+            }
+        },
+            "vtc14": {
+            "title": "VTC14",
+            "logo": "vtc14.png",
+            "desc": "Thời tiết - Môi trường - Đời sống",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC14_abr/vtc130121/VTC14_720p/chunks.m3u8"
+            }
+        },
+
+
+
+        "Vcab7": {
+            "title": "Vcab7",
+            "logo": "vcab7.png",
+            "desc": "D Drama",
+            "src": {
+                "id":"vcab",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/live.php?id=480"
             }
         }
     }
