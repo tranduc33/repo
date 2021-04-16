@@ -5,8 +5,7 @@
             "logo":  "",
             "desc": "root menu",
             "content": [          
-            {"type":"chn","id":"vtc_vinhlong"},  
-            {"type":"chn","id":"Vcab7"},         
+            {"type":"chn","id":"vtc_vinhlong"},           
             {"type":"chn","id":"vtc_dongthap"},
             {"type":"chn","id":"vtc_dongnai"},  
             {"type":"chn","id":"vtc1"},
