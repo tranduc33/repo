@@ -10,10 +10,13 @@
             {"type":"chn","id":"vtc_dongthap"},
             {"type":"chn","id":"vtc_dongnai"},  
             {"type":"chn","id":"vtc1"},
+            {"type":"chn","id":"vtc2"},
+            {"type":"chn","id":"vtc3"},
             {"type":"chn","id":"vtc6"},
             {"type":"chn","id":"vtc9"},
             {"type":"chn","id":"vtc10"}, 
             {"type":"chn","id":"vtc14"},
+            {"type":"chn","id":"vtc16"},
             {"type":"chn","id":"vtvgo_vtv1"},
             {"type":"chn","id":"vtvgo_vtv2"},
             {"type":"chn","id":"vtvgo_vtv3"},
@@ -258,6 +261,26 @@
                 "page_url": "https://vtc130121.cdn.vnns.io/VTC1_abr/vtc130121/VTC1_720p/chunks.m3u8"
             }
         },
+        "vtc2": {
+            "title": "VTC2",
+            "logo": "vtc2.png",
+            "desc": "Khoa học - Công nghệ & Đời sống",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC2/chunks.m3u8"
+            }
+        },
+        "vtc3": {
+            "title": "VTC3",
+            "logo": "vtc3.png",
+            "desc": "Văn hóa - Thể thao - Giải trí",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC3_abr/vtc130121/VTC3_720p/chunks.m3u8"
+            }
+        },
         "vtc6": {
             "title": "VTC6",
             "logo": "vtc6.png",
@@ -296,6 +319,16 @@
                 "id":"vtc",
                 "playpath": "vtc",
                 "page_url": "https://vtc130121.cdn.vnns.io/VTC14_abr/vtc130121/VTC14_720p/chunks.m3u8"
+            }
+        },
+            "vtc16": {
+            "title": "VTC16",
+            "logo": "vtc16.png",
+            "desc": "Nông Nghiệp - Nông Thôn",
+            "src": {
+                "id":"vtc",
+                "playpath": "vtc",
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC16_abr/vtc130121/VTC16_720p/chunks.m3u8"
             }
         },
 
