@@ -4,10 +4,7 @@
             "title": "root",
             "logo":  "",
             "desc": "root menu",
-            "content": [          
-            {"type":"chn","id":"vtc_vinhlong"},           
-            {"type":"chn","id":"vtc_dongthap"},
-            {"type":"chn","id":"vtc_dongnai"},  
+            "content": [            
             {"type":"chn","id":"vtc1"},
             {"type":"chn","id":"vtc2"},
             {"type":"chn","id":"vtc3"},
