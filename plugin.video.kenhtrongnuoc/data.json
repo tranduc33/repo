@@ -4,7 +4,13 @@
             "title": "root",
             "logo":  "",
             "desc": "root menu",
-            "content": [            
+            "content": [    
+           	{"type":"chn","id":"vtc_vinhlong"},
+            {"type":"chn","id":"web_vinhlong2"},          
+            {"type":"chn","id":"vtc_dongthap"},
+            {"type":"chn","id":"vtc_dongnai"},          
+            {"type":"chn","id":"vtc_dongthap"},
+            {"type":"chn","id":"vtc_dongnai"},        
             {"type":"chn","id":"vtc1"},
             {"type":"chn","id":"vtc2"},
             {"type":"chn","id":"vtc3"},
@@ -232,14 +238,24 @@
             }
         },
         "vtc_vinhlong": {
-            "title": "THVL",
+            "title": "THVL-1",
             "logo": "thvl1.png",
-            "desc": "Vĩnh Long",
+            "desc": "Vĩnh Long 1",
             "src": {
                 "id":"vtc",
                 "playpath": "m3u8_tvnet",
 				"page_id":"1031/thvl1",
                 "referer": ""
+            }
+        },
+        "web_vinhlong2": {
+            "title": "THVL-2",
+            "logo": "thvl2.jpg",
+            "desc": "Vĩnh Long 2",
+            "src": {
+                "id":"vinhlong",
+                "playpath": "web-vinhlong",
+                "page_url": "https://liveweb.thvli.vn/thvl/thvl2.1080.m3u8"
             }
         },
 

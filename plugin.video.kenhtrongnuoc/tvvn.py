@@ -176,6 +176,10 @@ def play_link(chn, src):
         if data['channels'][chn]['src']['playpath'] == "vtc":
 			full_url = data['channels'][chn]['src']['page_url']
 
+        #parse https://www.thvli.vn/live
+        if data['channels'][chn]['src']['playpath'] == "web-vinhlong":
+            full_url = data['channels'][chn]['src']['page_url']
+
         #parse vchannel
         if data['channels'][chn]['src']['playpath'] == "vchannel":
             url = data['channels'][chn]['src']['page_url']
