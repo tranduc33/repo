@@ -33,73 +33,63 @@ from directory import *
 
 
 #get list of playlists
-def get_playlists():
-	url = 'https://www.googleapis.com/youtube/v3/playlists?part=snippet,contentDetails&channelId='+channel_id+'&maxResults=50&key='+api_key
-	raw = urllib.urlopen(url)
-	resp = json.load(raw)
-	raw.close()
-	totalplaylists = len(resp["items"])
-	for playlist in resp["items"]:
-		playlist_id = playlist["id"]
-		thumb = playlist["snippet"]["thumbnails"]["high"]["url"]
-		label = playlist["snippet"]["title"]
-		addDir(''+label.encode('utf-8')+'',playlist_id,1,thumb,1,totalplaylists,token='')
-	return
+# def get_playlists():
+# 	url = 'https://www.googleapis.com/youtube/v3/playlists?part=snippet,contentDetails&channelId='+channel_id+'&maxResults=50&key='+api_key
+# 	raw = urllib.urlopen(url)
+# 	resp = json.load(raw)
+# 	raw.close()
+# 	totalplaylists = len(resp["items"])
+# 	for playlist in resp["items"]:
+# 		playlist_id = playlist["id"]
+# 		thumb = playlist["snippet"]["thumbnails"]["high"]["url"]
+# 		label = playlist["snippet"]["title"]
+# 		addDir(''+label.encode('utf-8')+'',playlist_id,1,thumb,1,totalplaylists,token='')
+# 	return
 		
 #Get uploads playlist id and return the list of all videos videos uploaded by the channel user
-def get_all_youtube_uploads():
-	url_api = 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id='+channel_id+'&key='+api_key
-	raw = urllib.urlopen(url_api)
-	resp = json.load(raw)
-	raw.close()
-	if "items" in resp.keys():
-		try:
-			uploads_playlist = resp["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
-			return_youtubevideos('all',uploads_playlist,'',1)
-		except:
-			sys.exit(0)
-	else:
-		sys.exit(0)
-	return
+# def get_all_youtube_uploads():
+# 	url_api = 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id='+channel_id+'&key='+api_key
+# 	raw = urllib.urlopen(url_api)
+# 	resp = json.load(raw)
+# 	raw.close()
+# 	if "items" in resp.keys():
+# 		try:
+# 			uploads_playlist = resp["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+# 			return_youtubevideos('all',uploads_playlist,'',1)
+# 		except:
+# 			sys.exit(0)
+# 	else:
+# 		sys.exit(0)
+# 	return
 
 #Get list of vod videos
 def return_youtubevideos(name,url,token,page,keyword):
 	items_per_page = int(selfAddon.getSetting('items_per_page'))
 	list_of_tupple_items = []
 	items_per_page=50 #maxResult - fix -DO NOT change
+
+
 	if page != 1:
 		url_api = BASE_URL+keyword+"%2Fsub%2F"+url+"PAGE"+str(page)+".txt/raw?ref=master&private_token="+get_key()
 	else:
 		url_api = BASE_URL+keyword+"%2Fsub%2F"+url+".txt/raw?ref=master&private_token="+get_key()
 
+
 	raw = requests.get(url_api)
-	#import web_pdb; web_pdb.set_trace()
 	resp = raw.json()
 	#import web_pdb; web_pdb.set_trace()
 	try: nextpagetoken = resp["nextPageToken"]
 	except: nextpagetoken = ''
 	try: availablevideos = resp["pageInfo"]["totalResults"]
 	except: availablevideos = 1
+	#import web_pdb; web_pdb.set_trace()
 	returnedVideos = resp["items"]
 	totalvideos = len(returnedVideos)
 	totalpages = int(math.ceil((float(availablevideos)/items_per_page)))
 	video_ids = []
 	#import web_pdb; web_pdb.set_trace()
 
-	if returnedVideos:
-		#for video in returnedVideos:
-		#	videoid = video["contentDetails"]["videoId"]
-		#	video_ids.append(videoid)
-		#video_ids = ','.join(video_ids)
-		#url_api = 'https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id='+video_ids+'&key='+api_key
-		#raw = urllib.urlopen(url_api)
-		#resp = json.load(raw)
-		#raw.close()
-		#returnedVideos = resp["items"]
-		#######
-		#returnedVideos = video["snippet"]
-		#import web_pdb; web_pdb.set_trace()
-		
+	if returnedVideos:		
 		for video in returnedVideos:
 			title = video["snippet"]["title"]
 			plot = video["snippet"]["description"]
@@ -109,13 +99,9 @@ def return_youtubevideos(name,url,token,page,keyword):
 				thumb = video["snippet"]["thumbnails"]["high"]["url"]
 			except:
 				pass
-			#videoid = video["id"]
+
 			videoid = video["contentDetails"]["videoId"]
-			#import web_pdb; web_pdb.set_trace()
-			#process duration
-			#duration_string = video["contentDetails"]["duration"]
-			#try: duration = return_duration_as_seconds(duration_string)
-			#except: duration = '0'
+
 			try: 
 				aired = re.compile('(.+?)-(.+?)-(.+?)T').findall(aired)[0]
 				date = aired[2] + '.' + aired[1] + '.' + aired[0]
@@ -172,10 +158,9 @@ def return_youtubevideos(name,url,token,page,keyword):
 
 	if totalpages > 1 and (page+1) <= totalpages:
 		addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),url,1,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
-
-	#import web_pdb; web_pdb.set_trace()
+	
 	xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
-	return
+	return 
 
 
 #Play a youtube video given the video_id	
@@ -187,7 +172,6 @@ def play_youtube_video(url):
 
 	player = KKPlayer(mainurl=url)
 
-	#player.play(video_url,item)
 	
 	dlg = xbmcgui.DialogProgress()
 	dlg.create( "Loading ..." )
@@ -202,11 +186,10 @@ def play_youtube_video(url):
 
 	dlg.close()
 
-
 	#while player._playbackLock:
 	#	player._trackPosition()
 	#	xbmc.sleep(1000)
-	return
+	return 
 	
 #receives a duration string and returns the duration in seconds (as string)
 def return_duration_as_seconds(string):

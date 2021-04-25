@@ -50,8 +50,8 @@ def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Dai Loan[/COLOR]','url',13,art + 'tw.png')
 		addDIR('[COLOR goldenrod]Phim Bo An Do[/COLOR]','url',14,art + 'ad.png')
 		addDIR('[COLOR goldenrod]Phim Bo Thai Lan[/COLOR]','url',15,art + 'tl.png')
-		#addDIR('[COLOR goldenrod]Phim Bo Nhat Ban[/COLOR]','url',17,art + 'nb.png')
 		addDIR('[COLOR goldenrod]Phim Bo Viet Nam[/COLOR]','url',18,art + 'vn.png')
+		addDIR('[COLOR goldenrod]Phong Su Du Lich[/COLOR]','url',17,art + 'phongsu.png')
 		
 		#addDIR('[COLOR blue]youtube-dl Control[/COLOR]','url',16,art + 'youtube-dlControl.png')
 		logo = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube','logo.png'))
@@ -66,8 +66,8 @@ def HongKong():
 
 	build_dir(keyword, 10, page)
 
-def NhatBan():
-	keyword = "phim+nhat+ban"
+def PhongSu():
+	keyword = "phong+su+du+lich"
 
 	# save keyword to file
 	write_keyword_to_file(keyword_path, keyword)
@@ -130,11 +130,12 @@ def TVB():
 
 	build_dir(keyword, 19, page)
 
-def youtube_dl():
-	xbmc.executebuiltin("RunAddon(script.module.youtube.dl)")
+#def youtube_dl():
+	#xbmc.executebuiltin("RunAddon(script.module.youtube.dl)")
 	
 
 def build_dir(keyword, mode, page):
+		list_of_tupple_items = []
 		if page != 1:
 			url_api = BASE_URL+keyword+"%2F"+token+".txt/raw?ref=master&private_token="+KEY
 		else:
@@ -154,21 +155,61 @@ def build_dir(keyword, mode, page):
 		totalpages = 10
 		#import web_pdb; web_pdb.set_trace()
 
+		video_info = { 'codec': 'avc1', 'aspect' : 1.78 }
+		audio_info = { 'codec': 'aac', 'language' : 'en' }
+		infolabels = {}
+
 		if returnedPlaylists:
 			for playlist in returnedPlaylists:
 				if ("playlistId" in playlist["id"]):
-					playlistid = playlist["id"]["playlistId"]
+					playid = playlist["id"]["playlistId"]
 					rawTitle = playlist["snippet"]["title"]
 					title = rawTitle.replace("|", "")
 
 					#import web_pdb; web_pdb.set_trace()
 					if ("thumbnails" in playlist["snippet"]):
 						thumbnail = playlist["snippet"]["thumbnails"]["high"]["url"]
-					#else:
-						#thumbnail = art+'movies.png'
-						addDIR(title,playlistid,1,thumbnail)
-			if totalpages > 1 and (page+1) <= totalpages:
-				addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playlistid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
+						addDIR(title,playid,1,thumbnail)
+
+
+				if ("videoId" in playlist["id"]):
+
+					title = playlist["snippet"]["title"]
+					plot = playlist["snippet"]["description"]
+					aired = playlist["snippet"]["publishedAt"]
+					try: 
+						aired = re.compile('(.+?)-(.+?)-(.+?)T').findall(aired)[0]
+						date = aired[2] + '.' + aired[1] + '.' + aired[0]
+						aired = aired[0]+'-'+aired[1]+'-'+aired[2]
+					except: 
+						aired = ''
+						date = ''
+
+
+					episode = ''
+
+
+					playcount = 0
+
+					playid = playlist["id"]["videoId"]
+					rawTitle = playlist["snippet"]["title"]
+					title = rawTitle.replace("|", "")
+					infolabels = {'plot':plot.encode('utf-8'),'aired':aired,'date':date,'tvshowtitle':tvshowtitle,'title':title.encode('utf-8'),'originaltitle':title.encode('utf-8'),'status':status,'cast':cast,'duration':None,'episode':episode,'playcount':playcount}
+					#import web_pdb; web_pdb.set_trace()
+					if ("thumbnails" in playlist["snippet"]):
+						thumbnail = playlist["snippet"]["thumbnails"]["high"]["url"]
+						tupple = build_episode_item(title.encode('utf-8'),playid,5,thumbnail,page,infolabels,video_info,audio_info)
+						list_of_tupple_items.append(tupple)
+
+		if list_of_tupple_items:
+			number_of_items = len(list_of_tupple_items)
+			#import web_pdb; web_pdb.set_trace()
+			xbmcplugin.addDirectoryItems(int(sys.argv[1]), list_of_tupple_items,totalItems=number_of_items)	
+			add_sort_methods()
+	 	if totalpages > 1 and (page+1) <= totalpages:
+		 	addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
+
+		return 
 
 
 def get_params():
@@ -216,12 +257,6 @@ except: pass
 try: page=int(params["page"])
 except: page = 1
 
-print ("Mode: "+str(mode))
-print ("URL: "+str(url))
-print ("Name: "+str(name))
-print ("iconimage: "+str(iconimage))
-print ("Page: "+str(page))
-print ("Token: "+str(token))
 
 		
 def addDIR(name,url,mode,iconimage):
@@ -288,7 +323,7 @@ elif mode==16:
 		youtube_dl()
 
 elif mode==17:
-		NhatBan()
+		PhongSu()
 
 elif mode==18:
 		VietNam()
