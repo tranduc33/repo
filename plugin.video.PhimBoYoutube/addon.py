@@ -52,6 +52,8 @@ def CATEGORIES():
 		addDIR('[COLOR goldenrod]Phim Bo Thai Lan[/COLOR]','url',15,art + 'tl.png')
 		addDIR('[COLOR goldenrod]Phim Bo Viet Nam[/COLOR]','url',18,art + 'vn.png')
 		addDIR('[COLOR goldenrod]Phong Su Du Lich[/COLOR]','url',17,art + 'phongsu.png')
+		addDIR('[COLOR goldenrod]Ky Su Van Son[/COLOR]','url',20,art + 'van-son.jpg')
+		addDIR('[COLOR goldenrod]Ky Su Khoai Lang Thang[/COLOR]','url',21,art + 'khoailangthang.jpg')
 		
 		#addDIR('[COLOR blue]youtube-dl Control[/COLOR]','url',16,art + 'youtube-dlControl.png')
 		logo = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube','logo.png'))
@@ -68,11 +70,21 @@ def HongKong():
 
 def PhongSu():
 	keyword = "phong+su+du+lich"
-
 	# save keyword to file
 	write_keyword_to_file(keyword_path, keyword)
-
 	build_dir(keyword, 17, page)
+
+def VanSon():
+	keyword = "ky+su+van+son"
+	# save keyword to file
+	write_keyword_to_file(keyword_path, keyword)
+	build_dir(keyword, 20, page)
+
+def KhoaiLangThang():
+	keyword = "ky+su+khoai+lang+thang"
+	# save keyword to file
+	write_keyword_to_file(keyword_path, keyword)
+	build_dir(keyword, 21, page)
 		
 def HanQuoc():
 	keyword = "phim+bo+han+quoc"
@@ -173,7 +185,7 @@ def build_dir(keyword, mode, page):
 
 
 				if ("videoId" in playlist["id"]):
-
+					totalpages = 4
 					title = playlist["snippet"]["title"]
 					plot = playlist["snippet"]["description"]
 					aired = playlist["snippet"]["publishedAt"]
@@ -330,5 +342,9 @@ elif mode==18:
 
 elif mode==19:
 		TVB()
+elif mode==20:
+		VanSon()
+elif mode==21:
+		KhoaiLangThang()
 				
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
