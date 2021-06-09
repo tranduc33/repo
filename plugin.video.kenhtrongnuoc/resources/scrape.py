@@ -89,16 +89,20 @@ def parse_vtvgo(url):
 def parse_101vn(url):
     headers = {
         'Connection': 'keep-alive',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36',
-        'Accept': '*/*;application/vnd.apple.mpegurl',
+        'Cache-Control': 'max-age=0',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36',
+        'Accept': '*/*',
+        'Origin': 'http://tvzz.101vn.com',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7',
     }
-    response = requests.get(url, headers=headers).text
-    
     #convert string to list
-    li = list(response.split("\n"))[3]
-    return li
+    li = list((requests.get(url, headers=headers)).text.split("\n"))
+    
+    #retun highdef link
+    if (len(li)) > 3:
+        return li[4]   
+    return 0
 
 #parse vchannel
 def parse_vchannel(url):
