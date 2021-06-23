@@ -1,0 +1,156 @@
+{
+    "directories": {
+        "root": {
+            "title": "root",
+            "logo":  "",
+            "desc": "root menu",
+            "content": [    
+           	{"type":"chn","id":"sgtv"},          
+            {"type":"chn","id":"vstv"},
+            {"type":"chn","id":"vietoday"}, 
+            {"type":"chn","id":"lstv"},         
+            {"type":"chn","id":"set"},
+            {"type":"chn","id":"set2"}, 
+            {"type":"chn","id":"vbs"},       
+            {"type":"chn","id":"ibc"},
+            {"type":"chn","id":"vna"},
+            {"type":"chn","id":"vietsky"},
+            {"type":"chn","id":"haile"},
+            {"type":"chn","id":"onphim"}, 
+            {"type":"chn","id":"onbiz"}        
+            ]
+        }
+    },
+    "channels": {
+        "sgtv": {
+            "title": "SAIGON TV",
+            "logo": "sgtv.png",
+            "desc": "",
+            "src": {
+                "id":"vchn",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/watch2.php?id=426"  
+            }
+        },
+        "vstv": {
+            "title": "VSTV",
+            "logo": "vstv.jpg",
+            "desc": "",
+            "src": {
+                "id":"vchn",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/watch2.php?id=427"  
+            }
+        },
+        "vietoday": {
+            "title": "VIET TODAY",
+            "logo": "vietoday.png",
+            "desc": "",
+            "src": {
+                "id":"vchn",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/watch2.php?id=425"  
+            }
+        },
+        "lstv": {
+            "title": "LITTLE SAIGON TV",
+            "logo": "lstv.png",
+            "desc": "",
+            "src": {
+                "id":"lstv",
+                "playpath": "lstv",
+                "page_url": "https://media.streambrothers.com:1936/8228/8228/playlist.m3u8"
+            }
+        },
+        "set": {
+            "title": "S.E.T",
+            "logo": "set.png",
+            "desc": "",
+            "src": {
+                "id":"set",
+                "playpath": "non-scrape",
+                "page_url": "https://5dcab9aed53301.streamlock.net/SET1/livestream/chunklist_w1302893910.m3u8"
+            }
+        },
+        "set2": {
+            "title": "S.E.T 2",
+            "logo": "set2.png",
+            "desc": "",
+            "src": {
+                "id":"set",
+                "playpath": "non-scrape",
+                "page_url": "https://5dcabf026b188.streamlock.net/SET22/livestream/chunklist_w1355138568.m3u8"
+            }
+        },
+        "vbs": {
+            "title": "VBS TV",
+            "logo": "vbs.png",
+            "desc": "",
+            "src": {
+                "id":"vbs",
+                "playpath": "non-scrape",
+                "page_url": "http://uni6rtmp.tulix.tv:1935/vbstv/vbsabr.smil/chunklist_w940569397_b1228800.m3u8"
+            }
+        },
+        "ibc": {
+            "title": "IBC TV",
+            "logo": "ibc.png",
+            "desc": "",
+            "src": {
+                "id":"ibc",
+                "playpath": "non-scrape",
+                "page_url": "https://59d39900ebfb8.streamlock.net:443/ibctv/ibctv/playlist.m3u8"
+            }
+        },
+        "vna": {
+            "title": "VNA TV",
+            "logo": "vna.jpg",
+            "desc": "",
+            "src": {
+                "id":"vna",
+                "playpath": "non-scrape",
+                "page_url": "https://fr-1.galaxyott.com/viettv24/streamer/vnatv/livevnatv/vnatv_2/chunks.m3u8"
+            }
+        },
+        "vietsky": {
+            "title": "VIETSKY TV",
+            "logo": "vietsky.png",
+            "desc": "",
+            "src": {
+                "id":"vietsky",
+                "playpath": "vietsky",
+                "page_url": "https://livestream.com/vietskytv/events/8142772"
+            }
+        },
+        "haile": {
+            "title": "KDHL TV",
+            "logo": "haile.jpg",
+            "desc": "",
+            "src": {
+                "id":"haile",
+                "playpath": "non-scrape",
+                "page_url": "https://fr-1.galaxyott.com/viettv24/streamer/ttt/livehl/ttt_3/chunks.m3u8"
+            }
+        },
+        "onphim": {
+            "title": "ON PHIM",
+            "logo": "onphim.jpg",
+            "desc": "",
+            "src": {
+                "id":"vchn",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/watch2.php?id=428"
+            }
+        },
+        "onbiz": {
+            "title": "ON BIZ",
+            "logo": "onbiz.jpg",
+            "desc": "",
+            "src": {
+                "id":"vchn",
+                "playpath": "vchannel",
+                "page_url": "http://www.vietchannels.com/watch2.php?id=429"
+            }
+        }
+    }
+}
