@@ -8,8 +8,6 @@ import re
 import json
 
 
-
-
 def parse_vtvgo(url):
     session = requests.Session()
     headers = {
@@ -104,7 +102,15 @@ def parse_101vn(url):
         return li[4]   
     return 0
 
+#parse Vcab7
+def parse_vcab7(url):
+    res = requests.get(url)
+    return re.findall(r"source:\"(http://tna6.+?m3u8)\"", res.text)[0]
+
 #parse vchannel
 def parse_vchannel(url):
     res = requests.get(url)
-    return re.findall(r"source:\"(http://tna6.+?m3u8)\"", res.text)[0]
+    if res:
+        return re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
+    else:
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"

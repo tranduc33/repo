@@ -38,9 +38,12 @@ home = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path')).decode('utf-8'
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
-data = json.loads(open(datafile,"r").read())
+#data = json.loads(open(datafile,"r").read())
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhtrongnuoc/resources", ""))
+
+# request json at tdsolu
+data = get_key()
 
 mode=None
 
@@ -63,6 +66,8 @@ def get_params():
         return param
 
 params=get_params()
+
+
 
 try:         chn=urllib.unquote_plus(params["chn"])
 except: pass
@@ -185,6 +190,11 @@ def play_link(chn, src):
             url = data['channels'][chn]['src']['page_url']
             full_url = parse_vchannel(url)
 
+        #parse vcab7
+        if data['channels'][chn]['src']['playpath'] == "vcab7":
+            url = data['channels'][chn]['src']['page_url']
+            full_url = parse_vcab7(url)
+
         d_progress.close()
 
         #dialog = xbmcgui.Dialog()
@@ -195,23 +205,16 @@ def play_link(chn, src):
 
         return
 
-KEY = get_key()
-
-if  (str(KEY) == ""):
-	macid = get_mac()
-	dialog = xbmcgui.Dialog()
-	dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+macid)
-	sys.exit()
 
 
 def Init():
         construct_menu("root")
-        # if (mysettings.getSetting('json_url_auto_update')=='true' and mysettings.getSetting('json_url')!=''):
-        #         update_chn_list()
 
 if mode==None:
         Init()
 elif mode==1:
         play_link(chn, src)
+        #import web_pdb; web_pdb.set_trace()
 elif mode==2:
         construct_menu(chn)
+        

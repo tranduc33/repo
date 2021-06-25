@@ -99,10 +99,19 @@ def get_key():
 	url="https://tdsolu.com/validate.php"
 	
 	mac_value = get_mac()
-	myobj = {"macid": mac_value}
-	#myobj = {"macid": "509A4C0EC428"}
+	myobj = {
+		"macid": mac_value,
+		"service": "trongnuoc"
+		}
 	resp = requests.post(url, data = myobj)
-	return resp.text
+	#import web_pdb; web_pdb.set_trace()
+	try:
+		return resp.json()
+	except:
+		macid = get_mac()
+		dialog = xbmcgui.Dialog()
+		dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+macid)
+		sys.exit()
 
 
 
