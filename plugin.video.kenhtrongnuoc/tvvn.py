@@ -152,48 +152,57 @@ def play_link(chn, src):
 
         #m3u8 url from tvnet
         if data['channels'][chn]['src']['playpath'] == "m3u8_tvnet":
-            # url = 'https://vtvgo.vn/xem-truc-tuyen-kenh-vtv1-1.html'
-            # result = parse_url(url)
-            url = 'http://au.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
-            stringA = opener.open(url).read().decode('utf-8')
-            stringB = 'data-file="'
-            stringC = '"'
-            url = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
-            
-            stringA = opener.open(url).read().decode('utf-8')
-            stringB = '"url": "'
-            stringC = '"'
-            full_url_BC = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
-            full_url = full_url_BC
+                url = 'http://au.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
+                stringA = opener.open(url).read().decode('utf-8')
+                stringB = 'data-file="'
+                stringC = '"'
+                url = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
+                
+                stringA = opener.open(url).read().decode('utf-8')
+                stringB = '"url": "'
+                stringC = '"'
+                full_url_BC = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
+                full_url = full_url_BC
 
 
         #parse vtvgo
-        if data['channels'][chn]['src']['playpath'] == "m3u8_vtvgo":
-            url = data['channels'][chn]['src']['page_url']
-            full_url = parse_vtvgo(url)
+        elif data['channels'][chn]['src']['playpath'] == "m3u8_vtvgo":
+                url = data['channels'][chn]['src']['page_url']
+                full_url = parse_vtvgo(url)
 
         #parse http://tvzz.101vn.com/
-        if data['channels'][chn]['src']['playpath'] == "online":
-            url = data['channels'][chn]['src']['page_url']
-            full_url = parse_101vn(url)
+        elif data['channels'][chn]['src']['playpath'] == "online":
+                url = data['channels'][chn]['src']['page_url']
+                link = parse_101vn(url)
+                full_url = checkOffLine(link)
 
         #parse https://now.vtc.vn/
-        if data['channels'][chn]['src']['playpath'] == "vtc":
-			full_url = data['channels'][chn]['src']['page_url']
+        elif data['channels'][chn]['src']['playpath'] == "vtc":
+                link = data['channels'][chn]['src']['page_url']
+                full_url = checkOffLine(link)
 
         #parse https://www.thvli.vn/live
-        if data['channels'][chn]['src']['playpath'] == "web-vinhlong":
-            full_url = data['channels'][chn]['src']['page_url']
+        elif data['channels'][chn]['src']['playpath'] == "web-vinhlong":
+                full_url = data['channels'][chn]['src']['page_url']
 
         #parse vchannel
-        if data['channels'][chn]['src']['playpath'] == "vchannel":
-            url = data['channels'][chn]['src']['page_url']
-            full_url = parse_vchannel(url)
+        elif data['channels'][chn]['src']['playpath'] == "vchannel":
+                url = data['channels'][chn]['src']['page_url']
+                link = parse_vchannel(url)
+                full_url = checkOffLine(link)
 
         #parse vcab7
-        if data['channels'][chn]['src']['playpath'] == "vcab7":
-            url = data['channels'][chn]['src']['page_url']
-            full_url = parse_vcab7(url)
+        elif data['channels'][chn]['src']['playpath'] == "vcab7":
+                url = data['channels'][chn]['src']['page_url']
+                full_url = parse_vcab7(url)
+
+        #parse xemtivihot
+        elif data['channels'][chn]['src']['playpath'] == "xemtivihot":
+                url = data['channels'][chn]['src']['page_url']
+                link = parse_xemtivihot(url)
+                full_url = checkOffLine(link)
+
+        else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
         d_progress.close()
 

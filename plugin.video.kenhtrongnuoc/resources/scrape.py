@@ -100,7 +100,7 @@ def parse_101vn(url):
     #retun highdef link
     if (len(li)) > 3:
         return li[4]   
-    return 0
+    return "http://jasdfgolijasfdgasOffline.com"
 
 #parse Vcab7
 def parse_vcab7(url):
@@ -113,4 +113,19 @@ def parse_vchannel(url):
     if res:
         return re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
     else:
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
+
+#parse xemtivihot.com
+def parse_xemtivihot(url):
+    res = requests.get(url)
+    if res:
+        return re.findall(r"Myiframe\" src=\"(.+?chunks.m3u8)\"", res.text)[0]
+    else:
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
+
+# return off-line video
+def checkOffLine(url):
+    if requests.get(url).status_code != 200:
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
+    else: 
+        return url
