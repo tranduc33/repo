@@ -177,7 +177,7 @@ def play_link(chn, src):
                 full_url = checkOffLine(link)
 
         #parse https://now.vtc.vn/
-        elif data['channels'][chn]['src']['playpath'] == "vtc":
+        elif data['channels'][chn]['src']['playpath'] == "vtc" or "direct":
                 link = data['channels'][chn]['src']['page_url']
                 full_url = checkOffLine(link)
 
