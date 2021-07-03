@@ -173,11 +173,10 @@ def play_link(chn, src):
         #parse http://tvzz.101vn.com/
         elif data['channels'][chn]['src']['playpath'] == "online":
                 url = data['channels'][chn]['src']['page_url']
-                link = parse_101vn(url)
-                full_url = checkOffLine(link)
+                full_url = parse_101vn(url)
 
         #parse https://now.vtc.vn/
-        elif data['channels'][chn]['src']['playpath'] == "vtc" or "direct":
+        elif data['channels'][chn]['src']['playpath'] == ("vtc" or "direct"):
                 link = data['channels'][chn]['src']['page_url']
                 full_url = checkOffLine(link)
 
@@ -209,11 +208,8 @@ def play_link(chn, src):
         #dialog = xbmcgui.Dialog()
         #dialog.textviewer('Plot',full_url )
 
-        ok = xbmc.Player().play(full_url)
-
-
-        return
-
+        #ok = xbmc.Player().play(full_url)
+        return xbmc.Player().play(full_url)
 
 
 def Init():
