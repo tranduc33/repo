@@ -8,6 +8,56 @@ import re
 import json
 
 
+#parse tvnet
+def parse_tvnet(url):
+    
+    # request page
+    session = requests.Session()
+    headers = {
+      'Connection': 'keep-alive',
+      'Cache-Control': 'private',
+      'Upgrade-Insecure-Requests': '1',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+      'Accept': '*/*',
+      'Accept-Encoding': 'gzip, deflate',
+      'Accept-Language': 'en-US,en;q=0.5',
+    }
+
+    try:
+        r = session.get(url, headers=headers)
+    except Exception as ex:
+        print(ex)
+        pass
+
+    # title = re.findall(r"<title>(.+?\s.+?) | LiveTV", r.text)
+    # title = title[0]
+    # title = title.upper()
+    # print(title)
+    
+    # path_to_image =re.findall(r"data-image=(.+?) data-id", r.text)
+    # path_to_image = path_to_image[0]
+    
+    path_to_m3u = re.findall(r"data-file=\"(.+?)\" data-seek", r.text)
+    path_to_m3u = path_to_m3u[0]
+    
+    try:
+        session = requests.Session()
+        x = session.get(path_to_m3u, headers=headers)
+    except Exception as ex:
+        print(ex)
+        pass  
+
+    x = x.json()
+  
+    z = x[0]
+    
+    m3u = json.dumps(z["url"])
+    m3u = m3u.strip('"')
+    #import web_pdb; web_pdb.set_trace()
+    return m3u
+
+
+
 def parse_vtvgo(url):
     session = requests.Session()
     headers = {

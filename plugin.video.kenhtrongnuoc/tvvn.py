@@ -150,9 +150,9 @@ def play_link(chn, src):
         cj = CookieJar()
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
-        #m3u8 url from tvnet
+        #parse tvnet
         if data['channels'][chn]['src']['playpath'] == "m3u8_tvnet":
-                url = 'http://au.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
+                url = 'http://vn.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
                 stringA = opener.open(url).read().decode('utf-8')
                 stringB = 'data-file="'
                 stringC = '"'
@@ -162,6 +162,8 @@ def play_link(chn, src):
                 stringB = '"url": "'
                 stringC = '"'
                 full_url_BC = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
+                #full_url = parse_tvnet(url)
+                #import web_pdb; web_pdb.set_trace()
                 full_url = full_url_BC
 
 
@@ -169,6 +171,7 @@ def play_link(chn, src):
         elif data['channels'][chn]['src']['playpath'] == "m3u8_vtvgo":
                 url = data['channels'][chn]['src']['page_url']
                 full_url = parse_vtvgo(url)
+                #import web_pdb; web_pdb.set_trace()
 
         #parse http://tvzz.101vn.com/
         elif data['channels'][chn]['src']['playpath'] == "online":
