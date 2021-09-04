@@ -8,6 +8,22 @@ import re
 import json
 
 
+
+#parse xemtvtructuyen
+def parse_xemtvtructuyen(url):
+    headers = {
+        'Connection': 'keep-alive',
+        'Cache-Control': 'no-cache',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36',
+        'Accept': '*/*',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Origin': 'http://www.xemtvtructuyen.net',
+    }
+    r = requests.get(url, allow_redirects=False, headers=headers)
+    return (re.findall(r"link=\[\'(.+?)\'\];", r.text)[0])
+
+
 #parse tvnet
 def parse_tvnet(url):
     

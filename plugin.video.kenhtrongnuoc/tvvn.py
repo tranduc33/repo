@@ -204,6 +204,12 @@ def play_link(chn, src):
                 link = parse_xemtivihot(url)
                 full_url = checkOffLine(link)
 
+        #parse xemtivihot
+        elif data['channels'][chn]['src']['playpath'] == "xemtvtructuyen":
+                url = data['channels'][chn]['src']['page_url']
+                link = parse_xemtvtructuyen(url)
+                full_url = checkOffLine(link)
+
         else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
         d_progress.close()
