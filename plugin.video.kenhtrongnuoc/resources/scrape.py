@@ -44,31 +44,28 @@ def parse_tvnet(url):
     except Exception as ex:
         print(ex)
         pass
+    
+    path_to_json = re.findall(r"ownURL = \"(.+?)\";", r.text)
+    path_to_json = path_to_json[0]
 
-    # title = re.findall(r"<title>(.+?\s.+?) | LiveTV", r.text)
-    # title = title[0]
-    # title = title.upper()
-    # print(title)
-    
-    # path_to_image =re.findall(r"data-image=(.+?) data-id", r.text)
-    # path_to_image = path_to_image[0]
-    
-    path_to_m3u = re.findall(r"data-file=\"(.+?)\" data-seek", r.text)
-    path_to_m3u = path_to_m3u[0]
+    #import web_pdb; web_pdb.set_trace() 
     
     try:
         session = requests.Session()
-        x = session.get(path_to_m3u, headers=headers)
+        x = session.get(path_to_json, headers=headers)
     except Exception as ex:
         print(ex)
         pass  
 
-    x = x.json()
-  
-    z = x[0]
-    
-    m3u = json.dumps(z["url"])
+    x = x.json()[0]   
+    m3u = json.dumps(x["url"])
     m3u = m3u.strip('"')
+
+    #split string
+    base = m3u.partition("playlist")[0]
+    x = session.get(m3u)
+    tail = re.findall(r"1280x720\n(.+?)\n", x.text)
+    m3u = base + tail[0]
     #import web_pdb; web_pdb.set_trace()
     return m3u
 

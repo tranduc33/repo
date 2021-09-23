@@ -152,19 +152,9 @@ def play_link(chn, src):
 
         #parse tvnet
         if data['channels'][chn]['src']['playpath'] == "m3u8_tvnet":
-                url = 'http://vn.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
-                stringA = opener.open(url).read().decode('utf-8')
-                stringB = 'data-file="'
-                stringC = '"'
-                url = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
-                
-                stringA = opener.open(url).read().decode('utf-8')
-                stringB = '"url": "'
-                stringC = '"'
-                full_url_BC = re.search(stringB+"(.*?)"+re.escape(stringC),stringA).group(1)
-                #full_url = parse_tvnet(url)
+                url = 'http://us.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
+                full_url = parse_tvnet(url)
                 #import web_pdb; web_pdb.set_trace()
-                full_url = full_url_BC
 
 
         #parse vtvgo
