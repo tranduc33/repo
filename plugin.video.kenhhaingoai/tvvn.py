@@ -152,7 +152,8 @@ def play_link(chn, src):
         #parse vchannel
         if data['channels'][chn]['src']['playpath'] == "vchannel":
                 url = data['channels'][chn]['src']['page_url']
-                full_url = parse_vchannel(url)
+                link = parse_vchannel(url)
+                full_url = checkOffLine(link)
 
         #parse lstv
         if data['channels'][chn]['src']['playpath'] == "lstv":
