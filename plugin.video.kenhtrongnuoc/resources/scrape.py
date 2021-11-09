@@ -45,7 +45,7 @@ def parse_tvnet(url):
         print(ex)
         pass
     
-    path_to_json = re.findall(r"data-file=\"(.+?)\"", r.text)
+    path_to_json = re.findall(r"ownURL = \"(.+?)\"", r.text)
     path_to_json = path_to_json[0]
 
     #import web_pdb; web_pdb.set_trace() 
