@@ -9,19 +9,18 @@ import json
 
 
 
-#parse xemtvtructuyen
-def parse_xemtvtructuyen(url):
+#parse hplus.com.vn
+def parse_hplus(url):
     headers = {
         'Connection': 'keep-alive',
-        'Cache-Control': 'no-cache',
+        'Cache-Control': 'max-age=0',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36',
         'Accept': '*/*',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Origin': 'http://www.xemtvtructuyen.net',
+        'Accept-Language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7'
     }
-    r = requests.get(url, allow_redirects=False, headers=headers)
-    return (re.findall(r"link=\[\'(.+?)\'\];", r.text)[0])
+    r = requests.get(url, headers=headers)
+    return re.findall(r"getCatchup_admon.+?(https.+?playlist.m3u8)", r.text)[0]
 
 
 #parse tvnet
@@ -145,26 +144,6 @@ def parse_vtvgo(url):
         return None
 
 
-
-#parse http://tvzz.101vn.com/
-def parse_101vn(url):
-    headers = {
-        'Connection': 'keep-alive',
-        'Cache-Control': 'max-age=0',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36',
-        'Accept': '*/*',
-        'Origin': 'http://tvzz.101vn.com',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7',
-    }
-    #convert string to list
-    li = list((requests.get(url, headers=headers)).text.split("\n"))
-    
-    #retun highdef link
-    if (len(li)) > 3:
-        return li[4]   
-    return "http://jasdfgolijasfdgasOffline.com"
-
 #parse Vcab7
 def parse_vcab7(url):
     res = requests.get(url)
@@ -178,13 +157,6 @@ def parse_vchannel(url):
     else:
         return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
-#parse xemtivihot.com
-def parse_xemtivihot(url):
-    res = requests.get(url)
-    if res:
-        return re.findall(r"Myiframe\" src=\"(.+?chunks.m3u8)\"", res.text)[0]
-    else:
-        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
 # return off-line video
 def checkOffLine(url):

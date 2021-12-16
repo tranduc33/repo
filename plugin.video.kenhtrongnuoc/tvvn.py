@@ -145,6 +145,7 @@ def add_dir_link (namex):
 
 def play_link(chn, src):
         path = data['channels'][chn]['src']['playpath']
+        link = data['channels'][chn]['src']['page_url']
         item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
@@ -153,53 +154,30 @@ def play_link(chn, src):
 
         #parse tvnet
         if path == "m3u8_tvnet":
-                url = 'http://us.tvnet.gov.vn/kenh-truyen-hinh/'+data['channels'][chn]['src']['page_id']
-                full_url = parse_tvnet(url)
-                #import web_pdb; web_pdb.set_trace()
-
+                full_url = checkOffLine(parse_tvnet(link))
 
         #parse vtvgo
         elif path == "m3u8_vtvgo":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_vtvgo(url)
+                #url = data['channels'][chn]['src']['page_url']
+                full_url = parse_vtvgo(link)
                 #import web_pdb; web_pdb.set_trace()
-
-        #parse http://tvzz.101vn.com/
-        elif path == "online":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_101vn(url)
 
         #parse https://now.vtc.vn/
         elif (path == "vtc") or (path == "m3u8"):
                 link = data['channels'][chn]['src']['page_url']
                 full_url = checkOffLine(link)
 
-        #parse https://www.thvli.vn/live
-        elif path == "web-vinhlong":
-                full_url = data['channels'][chn]['src']['page_url']
-
         #parse vchannel
         elif path == "vchannel":
-                url = data['channels'][chn]['src']['page_url']
-                link = parse_vchannel(url)
-                full_url = checkOffLine(link)
+                full_url = checkOffLine(parse_vchannel(link))
 
         #parse vcab7
         elif path == "vcab7":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_vcab7(url)
+                full_url = checkOffLine(parse_vcab7(link))
 
-        #parse xemtivihot
-        elif path == "xemtivihot":
-                url = data['channels'][chn]['src']['page_url']
-                link = parse_xemtivihot(url)
-                full_url = checkOffLine(link)
-
-        #parse xemtivihot
-        elif path == "xemtvtructuyen":
-                url = data['channels'][chn]['src']['page_url']
-                link = parse_xemtvtructuyen(url)
-                full_url = checkOffLine(link)
+        #parse hplus
+        elif path == "hplus":
+                full_url = checkOffLine(parse_hplus(link))
 
         else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
