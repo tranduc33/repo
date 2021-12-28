@@ -77,11 +77,7 @@ try:         mode=int(params["mode"])
 except: pass
 
 def construct_menu(namex):
-        name = data['directories'][namex]['title']
-        lmode = '2'
-        iconimage = ''
         desc = data['directories'][namex]['desc']
-
         menu_items = data['directories'][namex]['content']
         for menu_item in menu_items:
                 #type == channel
@@ -148,27 +144,24 @@ def play_link(chn, src):
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
 
+        playPath = data['channels'][chn]['src']['playpath']
+        url = data['channels'][chn]['src']['page_url']
 
         #parse vchannel
-        if data['channels'][chn]['src']['playpath'] == "vchannel":
-                url = data['channels'][chn]['src']['page_url']
-                link = parse_vchannel(url)
-                full_url = checkOffLine(link)
+        if playPath == "vchannel":
+                full_url = checkOffLine(parse_vchannel(url))
 
         #parse lstv
-        if data['channels'][chn]['src']['playpath'] == "lstv":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_lstv(url)
+        elif playPath == "lstv":
+                full_url = checkOffLine(parse_lstv(url))
 
         #parse non-scape channels
-        if data['channels'][chn]['src']['playpath'] == "non-scrape":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_noncsraped(url)
+        elif playPath == "non-scrape":
+                full_url = checkOffLine(parse_noncsraped(url))
 
         #parse vietsky
-        if data['channels'][chn]['src']['playpath'] == "vietsky":
-                url = data['channels'][chn]['src']['page_url']
-                full_url = parse_vietsky(url)
+        elif playPath == "vietsky":
+                full_url = checkOffLine(parse_vietsky(url))
 
 
         d_progress.close()
