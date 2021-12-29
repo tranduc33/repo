@@ -163,6 +163,10 @@ def play_link(chn, src):
         elif playPath == "vietsky":
                 full_url = checkOffLine(parse_vietsky(url))
 
+        #parse vietmedia
+        elif playPath == "vietmedia":
+                full_url = checkOffLine(parse_vietmedia(url))
+
 
         d_progress.close()
 

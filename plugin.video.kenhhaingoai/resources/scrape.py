@@ -7,6 +7,14 @@ import re
 import json
 
 
+#parse vietmedia
+def parse_vietmedia(url):
+    res = requests.get(url)
+    if res:
+        return re.findall(r"\"m3u8_url\":\"(.+?)\",\"secure_m3u8_url\"", res.text)[2]
+    else:
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
 #parse vchannel
 def parse_vchannel(url):
     res = requests.get(url)
