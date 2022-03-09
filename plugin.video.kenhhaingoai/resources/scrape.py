@@ -44,8 +44,11 @@ def parse_vietsky(url):
 
 # return off-line video
 def checkOffLine(url):
-    if requests.get(url).status_code != 200:
+    try:
+        requests.get(url)
+    except:
         return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
-    else: 
+    else:
         return url
+
 
