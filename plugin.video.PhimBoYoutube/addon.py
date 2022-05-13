@@ -32,14 +32,9 @@ fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.You
 art = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.PhimBoYoutube/resources/img', ''))
 keyword_path = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.PhimBoYoutube/resources/lib", ""))
 
-KEY = get_key()
 
-if  (str(KEY) == ""):
-	macid = get_mac()
-	dialog = xbmcgui.Dialog()
-	dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+macid)
-	sys.exit()
-	
+# get Gitlab key
+KEY = get_key()
 
 
 def CATEGORIES():
@@ -164,7 +159,7 @@ def build_dir(keyword, mode, page):
 		returnedPlaylists = resp["items"]
 		totalPlaylists = len(returnedPlaylists)
 		#totalpages = int(math.ceil((float(availablevideos)/50)))
-		totalpages = 10
+		totalpages = 5
 		#import web_pdb; web_pdb.set_trace()
 
 		video_info = { 'codec': 'avc1', 'aspect' : 1.78 }
@@ -219,6 +214,7 @@ def build_dir(keyword, mode, page):
 			xbmcplugin.addDirectoryItems(int(sys.argv[1]), list_of_tupple_items,totalItems=number_of_items)	
 			add_sort_methods()
 	 	if totalpages > 1 and (page+1) <= totalpages:
+		 	#addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
 		 	addDir('[B]'+translate(30010)+'[/B] '+str(page)+'/'+str(totalpages),playid,mode,os.path.join(artfolder,'next.png'),page+1,1,token=nextpagetoken)
 
 		return 

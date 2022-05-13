@@ -172,23 +172,23 @@ def play_youtube_video(url):
 
 	player = KKPlayer(mainurl=url)
 
-	
 	dlg = xbmcgui.DialogProgress()
 	dlg.create( "Loading ..." )
+
 	player.play(video_url,item)
 	for i in range(0, 100):
 		dlg.update(i)
-		xbmc.sleep(100)
+		xbmc.sleep(20)
 
-		#if dlg.iscanceled(): 
-		#	dialog.textviewer("CANCEL")
-		#	return 0
+	if dlg.iscanceled(): 
+		return;
 
 	dlg.close()
 
 	#while player._playbackLock:
 	#	player._trackPosition()
 	#	xbmc.sleep(1000)
+
 	return 
 	
 #receives a duration string and returns the duration in seconds (as string)

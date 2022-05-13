@@ -30,6 +30,7 @@ import re
 import sys
 import requests
 import uuid 
+import json
 
 
 BASE_URL = "https://gitlab.com/api/v4/projects/teamVIB%2FYTphim/repository/files/"
@@ -94,15 +95,28 @@ def get_mac():
 	return '%012x' % uuid.getnode()
 	
 
-#get key from remote database by device MAC ID, return 0 if MAC not found
+#get key from remote database by device MAC ID
 def get_key():
-	url="https://tdsolu.com/validate.php"
+	url = "https://tdsolu.com/api/iptv/getChannelList.php"
 	
+	# retrieve device's mac id
 	mac_value = get_mac()
-	myobj = {"macid": mac_value}
-	#myobj = {"macid": "509A4C0EC428"}
-	resp = requests.post(url, data = myobj)
-	return resp.text
+
+	payload = {
+		"macid": mac_value,
+		"service": "youtubephim"
+		}
+
+	try:
+
+		# return Gitlab key
+		return ((requests.get(url, params = payload)).json())["key"]
+		#import web_pdb; web_pdb.set_trace()
+
+	except:
+		dialog = xbmcgui.Dialog()
+		dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
+		sys.exit()
 
 
 
