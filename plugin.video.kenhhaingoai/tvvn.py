@@ -38,12 +38,13 @@ home = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path')).decode('utf-8'
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
-#data = json.loads(open(datafile,"r").read())
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhhaingoai/resources", ""))
 
 # request json at tdsolu
 data = get_key()
+
+#import web_pdb; web_pdb.set_trace()
 
 mode=None
 
@@ -77,7 +78,7 @@ try:         mode=int(params["mode"])
 except: pass
 
 def construct_menu(namex):
-        desc = data['directories'][namex]['desc']
+        
         menu_items = data['directories'][namex]['content']
         for menu_item in menu_items:
                 #type == channel
@@ -149,7 +150,7 @@ def play_link(chn, src):
 
         #parse vchannel
         if playPath == "vchannel":
-                full_url = checkOffLine(parse_vchannel(url))
+                full_url = parse_vchannel(url)
 
         #parse lstv
         elif playPath == "lstv":

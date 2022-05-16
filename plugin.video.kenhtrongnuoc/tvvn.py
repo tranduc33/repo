@@ -149,8 +149,8 @@ def play_link(chn, src):
         item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
-        cj = CookieJar()
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+        #cj = CookieJar()
+        #opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
         #parse tvnet
         if path == "m3u8_tvnet":

@@ -17,11 +17,16 @@ def parse_vietmedia(url):
 
 #parse vchannel
 def parse_vchannel(url):
-    res = requests.get(url)
-    if res:
-        return re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
-    else:
+    try:
+        res = requests.get(url)
+        videoLink = re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
+    except:
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+    else:
+        if (requests.get(videoLink)).status_code !=  200:
+            return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        else:
+            return videoLink
 
 #parse lstv
 def parse_lstv(url):

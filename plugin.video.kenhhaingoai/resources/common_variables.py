@@ -25,6 +25,7 @@ import xbmcgui
 import sys
 import requests
 import uuid 
+import json
 
 
 
@@ -35,22 +36,23 @@ def get_mac():
 
 #get key from remote database by device MAC ID, return 0 if MAC not found
 def get_key():
-	url="https://tdsolu.com/validate.php"
-	#url="http://vmediabox.com//validate.php"
+
+	url = "https://tdsolu.com/api/iptv/getChannelList.php"
 	
+	# retrieve device's mac id
 	mac_value = get_mac()
-	myobj = {
+	payload = {
 		"macid": mac_value,
 		"service": "haingoai"
 		}
-	resp = requests.post(url, data = myobj)
 	#import web_pdb; web_pdb.set_trace()
 	try:
-		return resp.json()
+
+		return (requests.get(url, params = payload)).json()
+
 	except:
-		macid = get_mac()
 		dialog = xbmcgui.Dialog()
-		dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+macid)
+		dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
 		sys.exit()
 		
 
