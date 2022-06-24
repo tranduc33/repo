@@ -158,6 +158,13 @@ def parse_vchannel(url):
         return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
 
+#parse non-scraped channels
+def direct(url):
+    if (url):
+        return url
+    else:
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
 # return off-line video
 def checkOffLine(url):
     if requests.get(url).status_code != 200:

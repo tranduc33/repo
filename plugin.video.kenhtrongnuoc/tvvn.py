@@ -179,6 +179,10 @@ def play_link(chn, src):
         elif path == "hplus":
                 full_url = checkOffLine(parse_hplus(link))
 
+        #parse non-scape channels
+        elif path == "direct":
+                full_url = checkOffLine(direct(link))
+
         else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
         d_progress.close()
