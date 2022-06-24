@@ -38,11 +38,12 @@ def parse_tvnet(url):
       'Accept-Language': 'en-US,en;q=0.5',
     }
 
+    
+
     try:
-        r = session.get(url, headers=headers)
-    except Exception as ex:
-        print(ex)
-        pass
+        r = session.get(url, headers=headers, timeout=15)
+    except: 
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
     
     path_to_json = re.findall(r"ownURL = \"(.+?)\"", r.text)
     path_to_json = path_to_json[0]
@@ -51,10 +52,10 @@ def parse_tvnet(url):
     
     try:
         session = requests.Session()
-        x = session.get(path_to_json, headers=headers)
-    except Exception as ex:
-        print(ex)
-        pass  
+        x = session.get(path_to_json, headers=headers, timeout=15)
+    except: 
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+ 
 
     x = x.json()[0]   
     m3u = json.dumps(x["url"])
@@ -167,7 +168,9 @@ def direct(url):
 
 # return off-line video
 def checkOffLine(url):
-    if requests.get(url).status_code != 200:
+    try:
+        requests.get(url)
+    except:
         return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
-    else: 
+    else:
         return url
