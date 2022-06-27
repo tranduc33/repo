@@ -52,7 +52,7 @@ def parse_tvnet(url):
     
     try:
         session = requests.Session()
-        x = session.get(path_to_json, headers=headers, timeout=15)
+        x = session.get(path_to_json, headers=headers, timeout=10)
     except: 
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
  
@@ -165,6 +165,17 @@ def direct(url):
         return url
     else:
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
+
+# parse Truyen Hinh Vinh Long. Pull links from GitLab. Links were scrapped by selenium from local computer
+# then upload to GitLab
+def parse_thvl(id):
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Fthvl/repository/files/thvl/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    raw = requests.get(URL)
+    resp = raw.json()
+    return resp[id]
+
+
 
 # return off-line video
 def checkOffLine(url):

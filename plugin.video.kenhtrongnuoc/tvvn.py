@@ -183,7 +183,12 @@ def play_link(chn, src):
         elif path == "direct":
                 full_url = checkOffLine(direct(link))
 
-        else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
+        #parse thvl
+        elif path == "selenium":
+                id = data['channels'][chn]['src']['id']
+                full_url = checkOffLine(parse_thvl(id))
+
+        #else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
         d_progress.close()
 
