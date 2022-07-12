@@ -29,7 +29,7 @@
 
 <addon
 	id="plugin.video.kenhtrongnuoc"
-	version="1.9.4"
+	version="1.9.5"
 	name="Truyen Hinh Trong Nuoc"
 	provider-name="VIB team">
 	<requires>
