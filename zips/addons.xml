@@ -2,7 +2,7 @@
 <addons>
 <addon
 	id="plugin.video.kenhhaingoai"
-	version="1.0.1"
+	version="1.0.2"
 	name="Truyen Hinh Hai Ngoai"
 	provider-name="Son Tranduc">
 	<requires>

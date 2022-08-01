@@ -150,13 +150,13 @@ def play_link(chn, src):
 
         #parse vchannel
         if playPath == "vchannel":
-                full_url = parse_vchannel(url)
+                full_url = checkOffLine(parse_vchannel(url))
 
         #parse lstv
         elif playPath == "lstv":
                 full_url = checkOffLine(parse_lstv(url))
 
-        #parse non-scape channels
+        #parse non-scrape channels
         elif playPath == "non-scrape":
                 full_url = checkOffLine(parse_noncsraped(url))
 

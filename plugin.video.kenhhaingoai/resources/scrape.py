@@ -27,10 +27,15 @@ def parse_vchannel(url):
             return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
         else:
             return videoLink
+    #import web_pdb; web_pdb.set_trace()
+
 
 #parse lstv
 def parse_lstv(url):
-    return url
+    if (requests.get(url)).status_code !=  200:
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+    else:
+        return url
 
 #parse non-scraped channels
 def parse_noncsraped(url):
