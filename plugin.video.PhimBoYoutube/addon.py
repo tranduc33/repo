@@ -62,6 +62,7 @@ def HongKong():
 	write_keyword_to_file(keyword_path, keyword)
 
 	build_dir(keyword, 10, page)
+	#return_youtubevideos(name,url,token,page, keyword)
 
 def PhongSu():
 	keyword = "phong+su+du+lich"
@@ -285,7 +286,7 @@ def create_directory(dir_path, dir_name=None):
 		os.makedirs(dir_path)
 	return dir_path
 
-
+#import web_pdb; web_pdb.set_trace()
 
 if mode==None or url==None or len(url)<1:
 		CATEGORIES()
@@ -297,17 +298,17 @@ elif mode==1:
 elif mode==5: 
 		play_youtube_video(url)
 
-elif mode==6:
-		mark_as_watched(url)
+#elif mode==6:
+#		mark_as_watched(url)
 
-elif mode==7:
-		removed_watched(url)
+#elif mode==7:
+#		removed_watched(url)
 
-elif mode==8:
-		add_to_bookmarks(url)
+#elif mode==8:
+#		add_to_bookmarks(url)
 
-elif mode==9:
-		remove_from_bookmarks(url)
+#elif mode==9:
+#		remove_from_bookmarks(url)
 		
 elif mode==10:
 		HongKong()

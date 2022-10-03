@@ -20,13 +20,19 @@ def parse_vchannel(url):
     try:
         res = requests.get(url)
         videoLink = re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
+        #import web_pdb; web_pdb.set_trace()
     except:
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
     else:
-        if (requests.get(videoLink)).status_code !=  200:
-            return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
-        else:
+        try:
+            requests.get(videoLink)
             return videoLink
+        except:
+            return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        #if (requests.get(videoLink)).status_code !=  200:
+        #    return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        #else:
+        #    return videoLink
     #import web_pdb; web_pdb.set_trace()
 
 

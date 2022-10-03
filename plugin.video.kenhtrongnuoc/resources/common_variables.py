@@ -37,7 +37,7 @@ def get_mac():
 #get key from remote database by device MAC ID, return 0 if MAC not found
 def get_key():
 
-	url = "https://tdsolu.com/api/iptv/getChannelList.php"
+	url = "https://vietipbox.com/box-api/getChannelList.php"
 	
 	# retrieve device's mac id
 	mac_value = get_mac()

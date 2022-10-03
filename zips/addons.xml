@@ -2,7 +2,7 @@
 <addons>
 <addon
 	id="plugin.video.kenhhaingoai"
-	version="1.0.2"
+	version="1.1.0"
 	name="Truyen Hinh Hai Ngoai"
 	provider-name="Son Tranduc">
 	<requires>
@@ -29,7 +29,7 @@
 
 <addon
 	id="plugin.video.kenhtrongnuoc"
-	version="1.9.5"
+	version="2.0.0"
 	name="Truyen Hinh Trong Nuoc"
 	provider-name="VIB team">
 	<requires>
@@ -54,7 +54,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.PhimBoYoutube" name="Phim Bo YouTube" version="1.0.0" provider-name="teamVIB">
+<addon id="plugin.video.PhimBoYoutube" name="Phim Bo YouTube" version="1.1.0" provider-name="teamVIB">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube"/>
