@@ -38,10 +38,11 @@ def parse_vchannel(url):
 
 #parse lstv
 def parse_lstv(url):
-    if (requests.get(url)).status_code !=  200:
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
-    else:
-        return url
+    #if (requests.get(url, timeout=10)).status_code !=  200:
+    #    return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+    #else:
+    #    return url
+    checkOffLine(url)
 
 #parse non-scraped channels
 def parse_noncsraped(url):
@@ -61,7 +62,7 @@ def parse_vietsky(url):
 # return off-line video
 def checkOffLine(url):
     try:
-        requests.get(url)
+        requests.get(url, timeout=10)
     except:
         return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
     else:
