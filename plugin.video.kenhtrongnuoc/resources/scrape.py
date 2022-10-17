@@ -167,14 +167,21 @@ def direct(url):
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
 
 
-# parse Truyen Hinh Vinh Long. Pull links from GitLab. Links were scrapped by selenium from local computer
+# parse Truyen Hinh Vinh Long. Pull links from GitLab. Links have been scrapped by selenium from local computer
 # then upload to GitLab
 def parse_thvl(id):
-    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Fthvl/repository/files/thvl/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/live/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
     raw = requests.get(URL)
     resp = raw.json()
     return resp[id]
 
+
+def parse_for_chunklist_from_gitlab(id):
+    #retrieve url
+    url = parse_thvl(id)
+    base = url.rsplit("/", 1)
+    response = requests.get(url, verify=False)
+    return base[0] +"/" + re.findall(r"\n(.+?m3u8)", response.text)[0]
 
 
 # return off-line video

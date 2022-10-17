@@ -42,7 +42,7 @@ datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhtrongnuoc/resources", ""))
 
-# request json at tdsolu
+# request json at vietipbox/public_html/box-api
 data = get_key()
 
 mode=None
@@ -183,10 +183,18 @@ def play_link(chn, src):
         elif path == "direct":
                 full_url = checkOffLine(direct(link))
 
-        #parse thvl
+        #parse using selenium 
         elif path == "selenium":
                 id = data['channels'][chn]['src']['id']
                 full_url = checkOffLine(parse_thvl(id))
+
+
+        #parse chunkist 
+        elif path == "selenium-chunklist":
+                id = data['channels'][chn]['src']['id']
+                full_url = parse_for_chunklist_from_gitlab(id)
+
+
 
         #else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
