@@ -41,12 +41,13 @@ datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhhaingoai/resources", ""))
 
-# request json at tdsolu
-data = get_key()
+
+def get_json():
+        with open (datafile,"r") as f:
+                return json.load(f)
 
 #import web_pdb; web_pdb.set_trace()
 
-mode=None
 
 def get_params():
         param=[]
@@ -63,19 +64,9 @@ def get_params():
                         splitparams=pairsofparams[i].split('=')
                         if (len(splitparams))==2:
                                 param[splitparams[0]]=splitparams[1]
-
         return param
 
-params=get_params()
 
-
-
-try:         chn=urllib.unquote_plus(params["chn"])
-except: pass
-try:         src=urllib.unquote_plus(params["src"])
-except: pass
-try:         mode=int(params["mode"])
-except: pass
 
 def construct_menu(namex):
         
@@ -141,6 +132,7 @@ def add_dir_link (namex):
 
 
 def play_link(chn, src):
+        data = get_json()
         #item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
@@ -180,13 +172,32 @@ def play_link(chn, src):
 
 #import web_pdb; web_pdb.set_trace()
 
-def Init():
-        construct_menu("root")
+mode=None
+params=get_params()
+#import web_pdb; web_pdb.set_trace()
 
-if mode==None:
-        Init()
-elif mode==1:
-        play_link(chn, src)
-elif mode==2:
-        construct_menu(chn)
+
+try:         chn=urllib.unquote_plus(params["chn"])
+except: pass
+try:         src=urllib.unquote_plus(params["src"])
+except: pass
+try:         mode=int(params["mode"])
+except: pass
+
+#mode=int(params["mode"])
+#import web_pdb; web_pdb.set_trace()
         
+#get channel json object and save to file
+if mode == None:
+        with open (datafile,"w") as f:
+                json.dump(get_key(), f, ensure_ascii=False, indent=4)
+
+data = get_json()
+
+#import web_pdb; web_pdb.set_trace()
+
+#if mode==None:
+construct_menu("root")
+
+if mode==1:
+        play_link(chn, src)

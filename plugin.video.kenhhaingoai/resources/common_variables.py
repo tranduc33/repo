@@ -41,7 +41,7 @@ def get_key():
 	
 	# retrieve device's mac id
 	mac_value = get_mac()
-	#mac_value = "068eb213e0c4"
+	#mac_value = "18cc18d9574b"
 	payload = {
 		"macid": mac_value,
 		"service": "haingoai"

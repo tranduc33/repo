@@ -1,0 +1,427 @@
+{
+    "channels": {
+        "lstv": {
+            "logo": "lstv.png", 
+            "src": {
+                "playpath": "lstv", 
+                "id": "lstv", 
+                "page_url": "https://media.streambrothers.com:1936/8228/8228/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "LITTLE SAIGON TV"
+        }, 
+        "set": {
+            "logo": "set.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "set", 
+                "page_url": "https://5dcab9aed5331.streamlock.net/SET1/livestream/chunklist_w732934357.m3u8"
+            }, 
+            "desc": "", 
+            "title": "S.E.T"
+        }, 
+        "viet-mtv": {
+            "logo": "viet-mtv.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "viet-mtv", 
+                "page_url": "https://live.relentlessinnovations.net:1936/vietmtv/vietmtv/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "VIET MTV"
+        }, 
+        "foxnews": {
+            "logo": "foxnews.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "foxnews", 
+                "page_url": "https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "FOX NEWS"
+        }, 
+        "vietsky": {
+            "logo": "vietsky.png", 
+            "src": {
+                "playpath": "vietsky", 
+                "id": "vietsky", 
+                "page_url": "https://livestream.com/vietskytv/events/8142772"
+            }, 
+            "desc": "", 
+            "title": "VIETSKY TV"
+        }, 
+        "fox_weather": {
+            "logo": "fox-weather.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox_weather", 
+                "page_url": "https://csm-e-eb.csm.tubi.video/csm/extlive/tubiprd01,Fox-Weather.m3u8"
+            }, 
+            "desc": "", 
+            "title": "FOX WEATHER"
+        }, 
+        "vstv": {
+            "logo": "vstv.jpg", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vchn", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=427"
+            }, 
+            "desc": "", 
+            "title": "VSTV"
+        }, 
+        "truTV": {
+            "logo": "trutv.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "trutv.png", 
+                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "truTV"
+        }, 
+        "tnt-sport-5": {
+            "logo": "TNT_Sports.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "BR", 
+                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_05/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TNT SPORTS 5"
+        }, 
+        "tnt-sport-4": {
+            "logo": "TNT_Sports.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "BR", 
+                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_04/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TNT SPORTS 4"
+        }, 
+        "tnt-sport-2": {
+            "logo": "TNT_Sports.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "BR", 
+                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_02/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TNT SPORTS 2"
+        }, 
+        "cartoon": {
+            "logo": "cartoon-network.jpg", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "", 
+                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023180/toonwest/slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CARTOON NETWORK"
+        }, 
+        "lsn": {
+            "logo": "lax-sports-network.jpg", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "", 
+                "page_url": "https://1840769862.rsc.cdn77.org/FTF/LSN_SCTE.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Lax Sports Network"
+        }, 
+        "onphim": {
+            "logo": "onphim.jpg", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vchn", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=428"
+            }, 
+            "desc": "", 
+            "title": "ON PHIM"
+        }, 
+        "vnbc": {
+            "logo": "vnbc.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "vnbc", 
+                "page_url": "https://live.relentlessinnovations.net:1936/vnbc/vnbc/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "VNBC"
+        }, 
+        "set2": {
+            "logo": "set2.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "set", 
+                "page_url": "https://5dcabf026b188.streamlock.net/SET22/livestream/chunklist_w1355138568.m3u8"
+            }, 
+            "desc": "", 
+            "title": "S.E.T 2"
+        }, 
+        "cnn": {
+            "logo": "cnn.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cnn", 
+                "page_url": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CNN"
+        }, 
+        "onsports": {
+            "logo": "on-sports.png", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "onsports", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=515"
+            }, 
+            "desc": "", 
+            "title": "ON SPORTS"
+        }, 
+        "vna": {
+            "logo": "vna.jpg", 
+            "src": {
+                "playpath": "vietmedia", 
+                "id": "vna", 
+                "page_url": "https://livestream.com/accounts/27740027/events/9163789/player"
+            }, 
+            "desc": "", 
+            "title": "VNA TV"
+        }, 
+        "tnt": {
+            "logo": "tnt.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "tennis.png", 
+                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TNT"
+        }, 
+        "tennis": {
+            "logo": "tennis.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "tennis.png", 
+                "page_url": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TENNIS"
+        }, 
+        "tbs": {
+            "logo": "tbs.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "trutv.png", 
+                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TBS"
+        }, 
+        "sgtv": {
+            "logo": "sgtv.png", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vchn", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=426"
+            }, 
+            "desc": "", 
+            "title": "SAIGON TV"
+        }, 
+        "ibc": {
+            "logo": "ibc.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "ibc", 
+                "page_url": "https://59d39900ebfb8.streamlock.net:443/ibctv/ibctv/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "IBC TV"
+        }, 
+        "cbsn": {
+            "logo": "cbsn.jpg", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbsn", 
+                "page_url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBSN"
+        }, 
+        "vietmedia": {
+            "logo": "vietmedia.png", 
+            "src": {
+                "playpath": "vietmedia", 
+                "id": "vietmedia", 
+                "page_url": "https://livestream.com/accounts/27740027/events/8840647"
+            }, 
+            "desc": "", 
+            "title": "VIETMEDIA TV"
+        }, 
+        "ngw": {
+            "logo": "ngw.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "ngw", 
+                "page_url": "http://admdn2.cdn.mangomolo.com/nagtv/smil:nagtv.stream.smil/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NAT GEO WILD"
+        }, 
+        "pbs": {
+            "logo": "pbs.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "", 
+                "page_url": "https://pbs.lls.cdn.pbs.org/est/index.m3u8"
+            }, 
+            "desc": "", 
+            "title": "PBS Kids"
+        }, 
+        "vietoday": {
+            "logo": "vietoday.png", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vchn", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=510"
+            }, 
+            "desc": "", 
+            "title": "VIET TODAY"
+        }, 
+        "onbiz": {
+            "logo": "onbiz.jpg", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vchn", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=429"
+            }, 
+            "desc": "", 
+            "title": "ON BIZ"
+        }, 
+        "vbs": {
+            "logo": "vbs.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "vbs", 
+                "page_url": "http://uni6rtmp.tulix.tv:1935/vbstv/vbsabr.smil/chunklist_w940569397_b1228800.m3u8"
+            }, 
+            "desc": "", 
+            "title": "VBS TV"
+        }
+    }, 
+    "directories": {
+        "root": {
+            "content": [
+                {
+                    "type": "chn", 
+                    "id": "sgtv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "lstv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vietoday"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vstv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "set"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "set2"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vbs"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vna"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "ibc"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vietsky"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vietmedia"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "viet-mtv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vnbc"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "onsports"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cnn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "foxnews"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox_weather"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbsn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "tennis"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "lsn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "ngw"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "tnt"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "truTV"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "tbs"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "pbs"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cartoon"
+                }
+            ], 
+            "logo": "", 
+            "desc": "root menu", 
+            "title": "root"
+        }
+    }
+}
