@@ -41,7 +41,7 @@ def get_key():
 	
 	# retrieve device's mac id
 	mac_value = get_mac()
-	
+	#import web_pdb; web_pdb.set_trace()
 	payload = {
 		"macid": mac_value,
 		"service": "trongnuoc"

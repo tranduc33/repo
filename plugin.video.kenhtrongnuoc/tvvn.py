@@ -38,14 +38,15 @@ home = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path')).decode('utf-8'
 fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
 datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
-#data = json.loads(open(datafile,"r").read())
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhtrongnuoc/resources", ""))
 
-# request json at vietipbox/public_html/box-api
-data = get_key()
 
-mode=None
+# retrieve channel list object from file
+def get_json():
+        with open (datafile,"r") as f:
+                return json.load(f)
+
 
 def get_params():
         param=[]
@@ -206,15 +207,27 @@ def play_link(chn, src):
         #ok = xbmc.Player().play(full_url)
         return xbmc.Player().play(full_url)
 
+mode=None
+params=get_params()
 
-def Init():
-        construct_menu("root")
+try:         chn=urllib.unquote_plus(params["chn"])
+except: pass
+try:         src=urllib.unquote_plus(params["src"])
+except: pass
+try:         mode=int(params["mode"])
+except: pass
 
-if mode==None:
-        Init()
-elif mode==1:
+
+        
+#get channel list in json and save to file
+if mode == None:
+        with open (datafile,"w") as f:
+                json.dump(get_key(), f, ensure_ascii=True, indent=4)
+
+data = get_json()
+
+construct_menu("root")
+if mode==1:
         play_link(chn, src)
-        #import web_pdb; web_pdb.set_trace()
-elif mode==2:
-        construct_menu(chn)
+
         
