@@ -80,35 +80,15 @@
             "desc": "", 
             "title": "truTV"
         }, 
-        "tnt-sport-5": {
-            "logo": "TNT_Sports.png", 
+        "tennis": {
+            "logo": "tennis.png", 
             "src": {
                 "playpath": "non-scrape", 
-                "id": "BR", 
-                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_05/playlist.m3u8"
+                "id": "tennis.png", 
+                "page_url": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8"
             }, 
             "desc": "", 
-            "title": "TNT SPORTS 5"
-        }, 
-        "tnt-sport-4": {
-            "logo": "TNT_Sports.png", 
-            "src": {
-                "playpath": "non-scrape", 
-                "id": "BR", 
-                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_04/playlist.m3u8"
-            }, 
-            "desc": "", 
-            "title": "TNT SPORTS 4"
-        }, 
-        "tnt-sport-2": {
-            "logo": "TNT_Sports.png", 
-            "src": {
-                "playpath": "non-scrape", 
-                "id": "BR", 
-                "page_url": "https://glxlmn026c.singularcdn.net.br/playout_02/playlist.m3u8"
-            }, 
-            "desc": "", 
-            "title": "TNT SPORTS 2"
+            "title": "TENNIS"
         }, 
         "cartoon": {
             "logo": "cartoon-network.jpg", 
@@ -170,6 +150,16 @@
             "desc": "", 
             "title": "CNN"
         }, 
+        "tbs": {
+            "logo": "tbs.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "trutv.png", 
+                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TBS"
+        }, 
         "onsports": {
             "logo": "on-sports.png", 
             "src": {
@@ -200,25 +190,15 @@
             "desc": "", 
             "title": "TNT"
         }, 
-        "tennis": {
-            "logo": "tennis.png", 
+        "abc-dallas": {
+            "logo": "news.png", 
             "src": {
                 "playpath": "non-scrape", 
-                "id": "tennis.png", 
-                "page_url": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8"
+                "id": "abc", 
+                "page_url": "https://livevideo01.wfaa.com/hls/live/2014541/newscasts/live.m3u8"
             }, 
             "desc": "", 
-            "title": "TENNIS"
-        }, 
-        "tbs": {
-            "logo": "tbs.png", 
-            "src": {
-                "playpath": "non-scrape", 
-                "id": "trutv.png", 
-                "page_url": "https://tve-live-lln.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8"
-            }, 
-            "desc": "", 
-            "title": "TBS"
+            "title": "ABC 8 Dallas TX (WFAA)"
         }, 
         "sgtv": {
             "logo": "sgtv.png", 
@@ -300,6 +280,16 @@
             "desc": "", 
             "title": "ON BIZ"
         }, 
+        "fox-houston": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://csm-e-eb.csm.tubi.video/csm/extlive/tubiprd01,p-KRIV-Monetizer.m3u8"
+            }, 
+            "desc": "", 
+            "title": "FOX 26 Houston TX (KRIV)"
+        }, 
         "vbs": {
             "logo": "vbs.png", 
             "src": {
@@ -309,6 +299,16 @@
             }, 
             "desc": "", 
             "title": "VBS TV"
+        }, 
+        "cbs-dallas": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsn-dal.cbsnstream.cbsnews.com/out/v1/ffa98bbf7d2b4c038c229bd4d9122708/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Dallas Ft Worth"
         }
     }, 
     "directories": {
@@ -372,22 +372,6 @@
                 }, 
                 {
                     "type": "chn", 
-                    "id": "cnn"
-                }, 
-                {
-                    "type": "chn", 
-                    "id": "foxnews"
-                }, 
-                {
-                    "type": "chn", 
-                    "id": "fox_weather"
-                }, 
-                {
-                    "type": "chn", 
-                    "id": "cbsn"
-                }, 
-                {
-                    "type": "chn", 
                     "id": "tennis"
                 }, 
                 {
@@ -417,6 +401,34 @@
                 {
                     "type": "chn", 
                     "id": "cartoon"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cnn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "foxnews"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox_weather"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbsn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-dallas"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox-houston"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-dallas"
                 }
             ], 
             "logo": "", 

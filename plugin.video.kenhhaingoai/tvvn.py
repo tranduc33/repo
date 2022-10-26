@@ -169,9 +169,6 @@ def play_link(chn, src):
         return
 
 
-
-#import web_pdb; web_pdb.set_trace()
-
 mode=None
 params=get_params()
 #import web_pdb; web_pdb.set_trace()
@@ -196,7 +193,6 @@ data = get_json()
 
 #import web_pdb; web_pdb.set_trace()
 
-#if mode==None:
 construct_menu("root")
 
 if mode==1:
