@@ -71,7 +71,8 @@ def parse_tvnet(url):
 
 
 
-def parse_vtvgo(url):
+def parse_vtvgo(cid):
+    url ="https://vtvgo.vn"
     session = requests.Session()
     headers = {
         'Connection': 'keep-alive',
@@ -83,15 +84,16 @@ def parse_vtvgo(url):
         'Accept-Language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7',
     }
 
+    headers ={}
+
     try:
         r = session.get(url, headers=headers)
         p_cookies = session.cookies.get_dict()
     except Exception as ex:
-        print(ex)
         pass
     
     token = re.findall(r"var token = '(.[^\']*)", r.text)
-    
+    #import web_pdb; web_pdb.set_trace()
     if not token:
         return None
     
@@ -99,11 +101,6 @@ def parse_vtvgo(url):
     
     time = token.split('.')[0]
 
-    cid = re.findall(r'var id = (\d+)', r.text)
-    if cid:
-        cid = cid[0]
-    else:
-        cid = 1
     
     type_id = re.findall(r'''var type_id = '(\d+)''', r.text)
     if type_id:
@@ -136,7 +133,7 @@ def parse_vtvgo(url):
 
     
     response = session.post('https://vtvgo.vn/ajax-get-stream', data=data, headers=headers, cookies=p_cookies)
-    
+    #import web_pdb; web_pdb.set_trace()
     jdata = response.json()
     if 'stream_url' in jdata:
         return jdata['stream_url'][0]
