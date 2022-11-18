@@ -503,7 +503,7 @@
         "sgtv": {
             "logo": "sgtv.png", 
             "src": {
-                "playpath": "saigontivi", 
+                "playpath": "tulix", 
                 "id": "sgtv", 
                 "page_url": "https://swf.tulix.tv/iframe/vchannel/saigon.php"
             }, 
@@ -613,9 +613,9 @@
         "vietoday": {
             "logo": "vietoday.png", 
             "src": {
-                "playpath": "vchannel", 
-                "id": "vchn", 
-                "page_url": "http://www.vietchannels.com/watch2.php?id=510"
+                "playpath": "tulix", 
+                "id": "vietoday", 
+                "page_url": "https://swf.tulix.tv/iframe/vchannel/vietoday.php"
             }, 
             "desc": "", 
             "title": "VIET TODAY"
