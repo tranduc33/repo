@@ -7,6 +7,15 @@ import re
 import json
 
 
+#parse saigontivi
+def parse_saigontivi(url):
+    res = requests.get(url)
+    if res:
+        return re.findall(r"source:\"(.+?)\"\}", res.text)[0]
+    else:
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
+
 #parse vietmedia
 def parse_vietmedia(url):
     res = requests.get(url)

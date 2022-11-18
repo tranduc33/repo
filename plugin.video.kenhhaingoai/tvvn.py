@@ -140,6 +140,11 @@ def play_link(chn, src):
         playPath = data['channels'][chn]['src']['playpath']
         url = data['channels'][chn]['src']['page_url']
 
+        
+        #parse saigontivi
+        if playPath == "saigontivi":
+                full_url = checkOffLine(parse_saigontivi(url))
+
         #parse vchannel
         if playPath == "vchannel":
                 full_url = checkOffLine(parse_vchannel(url))

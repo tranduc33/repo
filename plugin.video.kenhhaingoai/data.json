@@ -20,6 +20,26 @@
             "desc": "", 
             "title": "S.E.T"
         }, 
+        "cbs-san-diego": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.cbs8.com/hls/live/2014967/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 8 San Diego CA (KFMB-TV)"
+        }, 
+        "cbs-tampa": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.wtsp.com/hls/live/2015503/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 10 Tampa FL (WTSP)"
+        }, 
         "viet-mtv": {
             "logo": "viet-mtv.png", 
             "src": {
@@ -29,6 +49,16 @@
             }, 
             "desc": "", 
             "title": "VIET MTV"
+        }, 
+        "fox-pa": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://livevideo01.fox43.com/hls/live/2011656/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Fox 43 Harrisburg PA (WPMT)"
         }, 
         "foxnews": {
             "logo": "foxnews.png", 
@@ -50,6 +80,96 @@
             "desc": "", 
             "title": "VIETSKY TV"
         }, 
+        "abc-sacramento": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://livevideo01.abc10.com/hls/live/2014547/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 10 Sacramento CA (KXTV)"
+        }, 
+        "cbs-palm-beach": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://content.uplynk.com/channel/0123b306191a4307a31b9fb573213fd3.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 12 West Palm Beach FL (WPEC)"
+        }, 
+        "cbs-oh": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.wtol.com/hls/live/2017153/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 11 Toledo OH (WTOL)"
+        }, 
+        "cbs-ft-smith-AR": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.5newsonline.com/hls/live/2011653/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 5 Ft Smith AR (KFSM-TV)"
+        }, 
+        "cbs-omaha-NE": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://content.uplynk.com/channel/328d1434fb51476cb6567c74d5b2cc70.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 3 Omaha NE (KMTV-TV)"
+        }, 
+        "abc-nv": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/channel/39919d3f7a074eefa8bf579214e952f9.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 13 Las Vegas NV (KTNV)"
+        }, 
+        "abc-ky": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://livevideo01.whas11.com/hls/live/2016284/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 11 Louisville KY (WHAS)"
+        }, 
+        "nbc-buffalo": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.wgrz.com/hls/live/2016286/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 2 Buffalo NY (WGRZ)"
+        }, 
+        "abc-los": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/channel/ext/2118d9222a87420ab69223af9cfa0a0f/kabc_24x7_news.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 7 Los Angeles CA"
+        }, 
         "fox_weather": {
             "logo": "fox-weather.png", 
             "src": {
@@ -59,6 +179,46 @@
             }, 
             "desc": "", 
             "title": "FOX WEATHER"
+        }, 
+        "nbc-mo": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://content.uplynk.com/channel/50d0fa1b042945a3a4f550f9b8412c83.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 5 St. Louis MO (KSDK)"
+        }, 
+        "nbc-mn": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.kare11.com/hls/live/2014544/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 11 Minneapolis MN (KARE)"
+        }, 
+        "cbs-ny": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://content.uplynk.com/channel/bba3e7da884a49bba96341ecf5128f0f.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 6 Albany NY (WRGB)"
+        }, 
+        "abc-co": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/channel/64ca339f04964a5e961c3207a7771bf1.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 7 Denver CO (KMGH)"
         }, 
         "vstv": {
             "logo": "vstv.jpg", 
@@ -80,15 +240,35 @@
             "desc": "", 
             "title": "truTV"
         }, 
-        "tennis": {
-            "logo": "tennis.png", 
+        "nbc-md": {
+            "logo": "news.png", 
             "src": {
                 "playpath": "non-scrape", 
-                "id": "tennis.png", 
-                "page_url": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8"
+                "id": "nbc", 
+                "page_url": "http://51.161.118.146:8080/ISG03_NBC_BALTIMORE_MD_WBAL/video.m3u8"
             }, 
             "desc": "", 
-            "title": "TENNIS"
+            "title": "NBC Baltimore MD (WBAL-DT1"
+        }, 
+        "nbc-portland-or": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.kgw.com/hls/live/2015506/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 8 Portland OR (KGW)"
+        }, 
+        "nbc-co": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.9news.com/hls/live/2014548/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 9 Denver CO (KUSA)"
         }, 
         "cartoon": {
             "logo": "cartoon-network.jpg", 
@@ -100,15 +280,15 @@
             "desc": "", 
             "title": "CARTOON NETWORK"
         }, 
-        "lsn": {
-            "logo": "lax-sports-network.jpg", 
+        "abc-phoenix": {
+            "logo": "news.png", 
             "src": {
                 "playpath": "non-scrape", 
-                "id": "", 
-                "page_url": "https://1840769862.rsc.cdn77.org/FTF/LSN_SCTE.m3u8"
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/channel/9deaf22aaa33461f9cac22e030ed00ec.m3u8"
             }, 
             "desc": "", 
-            "title": "Lax Sports Network"
+            "title": "ABC 15 Phoenix AZ (KNXV-TV)"
         }, 
         "onphim": {
             "logo": "onphim.jpg", 
@@ -119,6 +299,16 @@
             }, 
             "desc": "", 
             "title": "ON PHIM"
+        }, 
+        "cbs-houston": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.khou.com/hls/live/2014966/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 11 Houston TX (KHOU)"
         }, 
         "vnbc": {
             "logo": "vnbc.png", 
@@ -140,6 +330,16 @@
             "desc": "", 
             "title": "S.E.T 2"
         }, 
+        "nbc-nc": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.wcnc.com/hls/live/2015505/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 36 Charlotte NC (WCNC-TV)"
+        }, 
         "cnn": {
             "logo": "cnn.png", 
             "src": {
@@ -160,6 +360,26 @@
             "desc": "", 
             "title": "TBS"
         }, 
+        "nbc-tx": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://livevideo01.kcentv.com/hls/live/2017155/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 6 Waco TX"
+        }, 
+        "nbc-id": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.ktvb.com/hls/live/2014542/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 7 Boise ID (KTVB)"
+        }, 
         "onsports": {
             "logo": "on-sports.png", 
             "src": {
@@ -169,6 +389,26 @@
             }, 
             "desc": "", 
             "title": "ON SPORTS"
+        }, 
+        "cbs-sc": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.wltx.com/hls/live/2017152/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 19 Columbia SC (WLTX)"
+        }, 
+        "nbc-phoenix": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.12news.com/hls/live/2015501/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 12 Phoenix AZ (KPNX)"
         }, 
         "vna": {
             "logo": "vna.jpg", 
@@ -190,6 +430,16 @@
             "desc": "", 
             "title": "TNT"
         }, 
+        "tennis": {
+            "logo": "tennis.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "tennis.png", 
+                "page_url": "https://tennischannel-intl-samsung-uk.amagi.tv/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "TENNIS"
+        }, 
         "abc-dallas": {
             "logo": "news.png", 
             "src": {
@@ -200,15 +450,75 @@
             "desc": "", 
             "title": "ABC 8 Dallas TX (WFAA)"
         }, 
+        "cbs-miami": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsn-mia.cbsnstream.cbsnews.com/out/v1/ac174b7938264d24ae27e56f6584bca0/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Miami"
+        }, 
+        "cbs-la": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.wwltv.com/hls/live/2016516/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 4 New Orleans LA (WWL-TV)"
+        }, 
+        "abc-tn": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://livevideo01.localmemphis.com/hls/live/2011654/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 24 Memphis TN (WATN-TV)"
+        }, 
+        "cbs-colorado": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsn-den.cbsnstream.cbsnews.com/out/v1/2e49baf2906244ecb01b07d9885fbe7a/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Colorado"
+        }, 
+        "abc-va": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://livevideo01.13newsnow.com/hls/live/2014545/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 13 Norfolk VA (WVEC)"
+        }, 
         "sgtv": {
             "logo": "sgtv.png", 
             "src": {
-                "playpath": "vchannel", 
-                "id": "vchn", 
-                "page_url": "http://www.vietchannels.com/watch2.php?id=426"
+                "playpath": "saigontivi", 
+                "id": "sgtv", 
+                "page_url": "https://swf.tulix.tv/iframe/vchannel/saigon.php"
             }, 
             "desc": "", 
             "title": "SAIGON TV"
+        }, 
+        "cbs-chicago": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsn-chi.cbsnstream.cbsnews.com/out/v1/b2fc0d5715d54908adf07f97d2616646/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Chicago"
         }, 
         "ibc": {
             "logo": "ibc.png", 
@@ -240,6 +550,16 @@
             "desc": "", 
             "title": "VIETMEDIA TV"
         }, 
+        "nbc-fl": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.firstcoastnews.com/hls/live/2014550/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC Jacksonville FL"
+        }, 
         "ngw": {
             "logo": "ngw.png", 
             "src": {
@@ -249,6 +569,36 @@
             }, 
             "desc": "", 
             "title": "NAT GEO WILD"
+        }, 
+        "nbc-seattle": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "nbc", 
+                "page_url": "https://livevideo01.king5.com/hls/live/2006665/live/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "NBC 5 Seattle WA (KING)"
+        }, 
+        "abc-ny": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/channel/ext/72750b711f704e4a94b5cfe6dc99f5e1/wabc_24x7_news.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC News New York NY (WABC-TV)"
+        }, 
+        "cbs-sacramento": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsnews.akamaized.net/hls/live/2020607/cbsnsac_2/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Sacramento"
         }, 
         "pbs": {
             "logo": "pbs.png", 
@@ -270,6 +620,16 @@
             "desc": "", 
             "title": "VIET TODAY"
         }, 
+        "fox-al": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://livevideo01.rocketcitynow.com/hls/live/2011659/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Fox 54.1 Huntsville AL (WZDX)"
+        }, 
         "onbiz": {
             "logo": "onbiz.jpg", 
             "src": {
@@ -279,6 +639,16 @@
             }, 
             "desc": "", 
             "title": "ON BIZ"
+        }, 
+        "abc-dc": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://content.uplynk.com/40cec2bf074c40f08932da03ab4510be.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 7 Washington DC (WJLA)"
         }, 
         "fox-houston": {
             "logo": "news.png", 
@@ -300,6 +670,36 @@
             "desc": "", 
             "title": "VBS TV"
         }, 
+        "lsn": {
+            "logo": "lax-sports-network.jpg", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "", 
+                "page_url": "https://1840769862.rsc.cdn77.org/FTF/LSN_SCTE.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Lax Sports Network"
+        }, 
+        "fox-ga": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://content.uplynk.com/channel/e56ba52a1b9d45ad8c8a033fd83fe480.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Fox 28 Savannah GA (WTGS)"
+        }, 
+        "abc-austin": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "abc", 
+                "page_url": "https://livevideo01.kvue.com/hls/live/2016282/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "ABC 24 Austin TX (KVUE)"
+        }, 
         "cbs-dallas": {
             "logo": "news.png", 
             "src": {
@@ -309,6 +709,46 @@
             }, 
             "desc": "", 
             "title": "CBS News Dallas Ft Worth"
+        }, 
+        "cbs-dc": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://livevideo01.wusa9.com/hls/live/2015498/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 9 Washington DC (WUSA)"
+        }, 
+        "fox-ct": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "fox", 
+                "page_url": "https://livevideo01.fox61.com/hls/live/2011658/newscasts/live.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Fox 61 Hartford CT (WTIC-TV)"
+        }, 
+        "cbs-los": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Los Angeles"
+        }, 
+        "cbs-baltimore": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS News Baltimore"
         }
     }, 
     "directories": {
@@ -428,7 +868,163 @@
                 }, 
                 {
                     "type": "chn", 
+                    "id": "cbs-houston"
+                }, 
+                {
+                    "type": "chn", 
                     "id": "abc-dallas"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-tx"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-austin"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-los"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-los"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-sacramento"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-sacramento"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-san-diego"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-ft-smith-AR"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-mn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-portland-or"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-seattle"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-phoenix"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-phoenix"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-mo"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-id"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-md"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-nc"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-baltimore"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-chicago"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-ny"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-buffalo"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-ny"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-palm-beach"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-tampa"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-miami"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nbc-fl"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-co"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-colorado"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-nv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-tn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-ky"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "abc-va"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-sc"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox-pa"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox-ga"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox-ct"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "fox-al"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "cbs-omaha-NE"
                 }
             ], 
             "logo": "", 
