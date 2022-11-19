@@ -167,7 +167,21 @@ def direct(url):
 # parse Truyen Hinh Vinh Long. Pull links from GitLab. Links have been scrapped by selenium from local computer
 # then upload to GitLab
 def parse_thvl(id):
-    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/live/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/thvl/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    raw = requests.get(URL)
+    resp = raw.json()
+    return resp[id]
+
+# parse truyền hình các tỉnh. Pull links from GitLab. Links have been scrapped by selenium from local computer
+# then upload to GitLab
+def parse_local(id):
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/local/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    raw = requests.get(URL)
+    resp = raw.json()
+    return resp[id]
+
+def parse_regex(id):
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/regex/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
     raw = requests.get(URL)
     resp = raw.json()
     return resp[id]
@@ -191,7 +205,7 @@ def parse_vtv6_11(id):
 
 def parse_for_chunklist_from_gitlab(id):
     #retrieve url
-    url = parse_thvl(id)
+    url = parse_local(id)
     base = url.rsplit("/", 1)
     response = requests.get(url, verify=False)
     return base[0] +"/" + re.findall(r"\n(.+?m3u8)", response.text)[0]

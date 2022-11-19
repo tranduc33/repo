@@ -185,9 +185,19 @@ def play_link(chn, src):
                 full_url = checkOffLine(direct(link))
 
         #parse using selenium for thvl 
-        elif path == "selenium":
+        elif path == "thvl":
                 id = data['channels'][chn]['src']['id']
                 full_url = checkOffLine(parse_thvl(id))
+
+        #parse using selenium for local 
+        elif path == "local":
+                id = data['channels'][chn]['src']['id']
+                full_url = checkOffLine(parse_local(id))
+
+        #parse using regex for local 
+        elif path == "regex":
+                id = data['channels'][chn]['src']['id']
+                full_url = checkOffLine(parse_regex(id))
 
         #parse using selenium for vtv
         elif path == "vtv1-5":

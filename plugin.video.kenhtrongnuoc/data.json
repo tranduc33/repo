@@ -10,35 +10,35 @@
             "desc": "HTV2", 
             "title": "HTV2"
         }, 
-        "vinhlong1": {
-            "logo": "thvl1.png", 
+        "danang2": {
+            "logo": "drt2b.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1031/thvl1"
+                "playpath": "direct", 
+                "id": "danang2", 
+                "page_url": "http://drtdnglive.e49a7c38.cdnviet.com/livestream/playlist.m3u8"
             }, 
-            "desc": "V\u0129nh Long 1", 
-            "title": "THVL-1"
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh \u0110\u00e0 N\u1eb5ng 2"
         }, 
-        "vtc10": {
-            "logo": "vtc10.png", 
+        "htv1": {
+            "logo": "htv1.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1006/netviet"
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv1-2631.html"
             }, 
-            "desc": "K\u00eanh V\u0103n h\u00f3a Vi\u1ec7t", 
-            "title": "VTC10"
+            "desc": "HTV1", 
+            "title": "HTV1"
         }, 
-        "vtc16": {
-            "logo": "vtc16.png", 
+        "htv7": {
+            "logo": "htv7.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1018/vtc16"
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv7-hd-256.html"
             }, 
-            "desc": "Khoa h\u1ecdc, C\u00f4ng ngh\u1ec7", 
-            "title": "VTC16"
+            "desc": "HTV7", 
+            "title": "HTV7"
         }, 
         "vtc14": {
             "logo": "vtc14.png", 
@@ -63,7 +63,7 @@
         "thbt": {
             "logo": "thbt.png", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "regex", 
                 "id": "thbt", 
                 "page_url": ""
             }, 
@@ -73,22 +73,22 @@
         "htv9": {
             "logo": "htv9.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1012/htv9"
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv9-hd-2667.html"
             }, 
             "desc": "Ch\u00ednh tr\u1ecb, X\u00e3 h\u1ed9i, V\u0103n h\u00f3a", 
             "title": "HTV9"
         }, 
-        "hanoi1": {
-            "logo": "hn1.png", 
+        "thbr": {
+            "logo": "thbr.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1008/hn"
+                "playpath": "selenium-chunklist", 
+                "id": "thbr", 
+                "page_url": ""
             }, 
-            "desc": "H\u00e0 N\u1ed9i 1", 
-            "title": "HN1"
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u00e0 R\u1ecba V\u0169ng T\u00e0u"
         }, 
         "thuanviet": {
             "logo": "thuanviet.png", 
@@ -100,16 +100,6 @@
             "desc": "", 
             "title": "Thu\u1ea7n Vi\u1ec7t"
         }, 
-        "htv1": {
-            "logo": "htv1.png", 
-            "src": {
-                "playpath": "hplus", 
-                "id": "hplus.vn", 
-                "page_url": "https://hplus.com.vn/xem-kenh-htv1-2631.html"
-            }, 
-            "desc": "HTV1", 
-            "title": "HTV1"
-        }, 
         "vtc3": {
             "logo": "vtc3.png", 
             "src": {
@@ -120,30 +110,20 @@
             "desc": "V\u0103n h\u00f3a - Th\u1ec3 thao - Gi\u1ea3i tr\u00ed", 
             "title": "VTC3"
         }, 
-        "dongnai": {
-            "logo": "dongnai1.png", 
+        "vtc2": {
+            "logo": "vtc2.png", 
             "src": {
-                "playpath": "m3u8_tvnet", 
+                "playpath": "vtc", 
                 "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1042/dong-nai1"
+                "page_url": "https://vtc130121.cdn.vnns.io/VTC2/chunks.m3u8"
             }, 
-            "desc": "\u0110\u1ed3ng Nai 1", 
-            "title": "DN1"
-        }, 
-        "vtc1": {
-            "logo": "vtc1.png", 
-            "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1007/vtc1"
-            }, 
-            "desc": "Th\u1eddi s\u1ef1 t\u1ed5ng h\u1ee3p", 
-            "title": "VTC1"
+            "desc": "Khoa h\u1ecdc - C\u00f4ng ngh\u1ec7 & \u0110\u1eddi s\u1ed1ng", 
+            "title": "VTC2"
         }, 
         "thdt": {
             "logo": "thdt.png", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "local", 
                 "id": "thdt", 
                 "page_url": ""
             }, 
@@ -153,7 +133,7 @@
         "thbd": {
             "logo": "btv1.png", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "regex", 
                 "id": "thbd", 
                 "page_url": ""
             }, 
@@ -169,16 +149,6 @@
             }, 
             "desc": "V\u0103n h\u00f3a, X\u00e3 h\u1ed9i, Gi\u1ea3i tr\u00ed", 
             "title": "VTC9"
-        }, 
-        "htv7": {
-            "logo": "htv7.png", 
-            "src": {
-                "playpath": "hplus", 
-                "id": "hplus.vn", 
-                "page_url": "https://hplus.com.vn/xem-kenh-htv7-hd-256.html"
-            }, 
-            "desc": "HTV7", 
-            "title": "HTV7"
         }, 
         "vtv8": {
             "logo": "vtv8.png", 
@@ -323,7 +293,7 @@
         "thvl3": {
             "logo": "thvl3.jpg", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "thvl", 
                 "id": "thvl3", 
                 "page_url": ""
             }, 
@@ -333,7 +303,7 @@
         "thvl2": {
             "logo": "thvl2.jpg", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "thvl", 
                 "id": "thvl2", 
                 "page_url": ""
             }, 
@@ -343,7 +313,7 @@
         "thvl1": {
             "logo": "thvl1.png", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "thvl", 
                 "id": "thvl1", 
                 "page_url": ""
             }, 
@@ -373,32 +343,12 @@
         "thvl4": {
             "logo": "thvl4.jpg", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "thvl", 
                 "id": "thvl4", 
                 "page_url": ""
             }, 
             "desc": "", 
             "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Long 4"
-        }, 
-        "thbr": {
-            "logo": "thbr.png", 
-            "src": {
-                "playpath": "selenium-chunklist", 
-                "id": "thbr", 
-                "page_url": ""
-            }, 
-            "desc": "", 
-            "title": "Truy\u1ec1n H\u00ecnh B\u00e0 R\u1ecba V\u0169ng T\u00e0u"
-        }, 
-        "thh": {
-            "logo": "thh.jpg", 
-            "src": {
-                "playpath": "direct", 
-                "id": "thh", 
-                "page_url": "https://live.trt.com.vn/TRT-Online/playlist.m3u8"
-            }, 
-            "desc": "", 
-            "title": "Truy\u1ec1n H\u00ecnh Th\u1eeba Thi\u00ean HU\u1ebe"
         }, 
         "echannel": {
             "logo": "echannel.jpg", 
@@ -430,16 +380,6 @@
             "desc": "", 
             "title": "Truy\u1ec1n H\u00ecnh C\u1ea7n Th\u01a1"
         }, 
-        "danang2": {
-            "logo": "drt2b.png", 
-            "src": {
-                "playpath": "direct", 
-                "id": "danang2", 
-                "page_url": "http://drtdnglive.e49a7c38.cdnviet.com/livestream/playlist.m3u8"
-            }, 
-            "desc": "", 
-            "title": "Truy\u1ec1n H\u00ecnh \u0110\u00e0 N\u1eb5ng 2"
-        }, 
         "thcm": {
             "logo": "thcm.png", 
             "src": {
@@ -453,7 +393,7 @@
         "thtg": {
             "logo": "thtg.jpg", 
             "src": {
-                "playpath": "selenium", 
+                "playpath": "local", 
                 "id": "thtg", 
                 "page_url": ""
             }, 
@@ -479,16 +419,6 @@
             }, 
             "desc": "", 
             "title": "Truy\u1ec1n H\u00ecnh Long An"
-        }, 
-        "vtvgo_vtv52": {
-            "logo": "vtv5TNB.png", 
-            "src": {
-                "playpath": "m3u8_vtvgo", 
-                "id": "vtvgo", 
-                "page_url": "7"
-            }, 
-            "desc": "K\u00eanh cho Kh\u00e1n gi\u1ea3 mi\u1ec1n T\u00e2y Nam B\u1ed9", 
-            "title": "VTV5TNB"
         }, 
         "vtc6": {
             "logo": "vtc6.png", 
@@ -520,45 +450,15 @@
             "desc": "", 
             "title": "Truy\u1ec1n H\u00ecnh Qu\u1ea3ng Nam"
         }, 
-        "vtvgo_vtv9": {
-            "logo": "vtv9.png", 
+        "thh": {
+            "logo": "thh.jpg", 
             "src": {
-                "playpath": "m3u8_vtvgo", 
-                "id": "vtvgo", 
-                "page_url": "39"
+                "playpath": "direct", 
+                "id": "thh", 
+                "page_url": "https://live.trt.com.vn/TRT-Online/playlist.m3u8"
             }, 
-            "desc": "K\u00eanh cho Kh\u00e1n gi\u1ea3 mi\u1ec1n Nam", 
-            "title": "VTV9"
-        }, 
-        "vtvgo_vtv8": {
-            "logo": "vtv8.png", 
-            "src": {
-                "playpath": "m3u8_vtvgo", 
-                "id": "vtvgo", 
-                "page_url": "36"
-            }, 
-            "desc": "K\u00eanh truy\u1ec1n h\u00ecnh T\u1ed5ng h\u1ee3p", 
-            "title": "VTV8"
-        }, 
-        "htv9-1": {
-            "logo": "htv9.png", 
-            "src": {
-                "playpath": "hplus", 
-                "id": "hplus.vn", 
-                "page_url": "https://hplus.com.vn/xem-kenh-htv9-hd-2667.html"
-            }, 
-            "desc": "Ch\u00ednh tr\u1ecb, X\u00e3 h\u1ed9i, V\u0103n h\u00f3a", 
-            "title": "HTV9"
-        }, 
-        "dongthap": {
-            "logo": "thdt.png", 
-            "src": {
-                "playpath": "m3u8_tvnet", 
-                "id": "vtc", 
-                "page_url": "http://us.tvnet.gov.vn/kenh-truyen-hinh/1053/dong-thap"
-            }, 
-            "desc": "\u0110\u1ed3ng Th\u00e1p 1", 
-            "title": "THDT"
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Th\u1eeba Thi\u00ean HU\u1ebe"
         }, 
         "thst": {
             "logo": "thst.png", 
@@ -569,16 +469,6 @@
             }, 
             "desc": "", 
             "title": "Truy\u1ec1n H\u00ecnh S\u00f3c Tr\u0103ng"
-        }, 
-        "vtc2": {
-            "logo": "vtc2.png", 
-            "src": {
-                "playpath": "vtc", 
-                "id": "vtc", 
-                "page_url": "https://vtc130121.cdn.vnns.io/VTC2/chunks.m3u8"
-            }, 
-            "desc": "Khoa h\u1ecdc - C\u00f4ng ngh\u1ec7 & \u0110\u1eddi s\u1ed1ng", 
-            "title": "VTC2"
         }
     }, 
     "directories": {
@@ -634,7 +524,7 @@
                 }, 
                 {
                     "type": "chn", 
-                    "id": "htv9-1"
+                    "id": "htv9"
                 }, 
                 {
                     "type": "chn", 
