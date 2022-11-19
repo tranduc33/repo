@@ -43,7 +43,7 @@ def parse_tvnet(url):
     try:
         r = session.get(url, headers=headers, timeout=15)
     except: 
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
     
     path_to_json = re.findall(r"ownURL = \"(.+?)\"", r.text)
     path_to_json = path_to_json[0]
@@ -54,7 +54,7 @@ def parse_tvnet(url):
         session = requests.Session()
         x = session.get(path_to_json, headers=headers, timeout=10)
     except: 
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
  
 
     x = x.json()[0]   
@@ -161,13 +161,29 @@ def direct(url):
     if (url):
         return url
     else:
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+        return "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
 
 # parse Truyen Hinh Vinh Long. Pull links from GitLab. Links have been scrapped by selenium from local computer
 # then upload to GitLab
 def parse_thvl(id):
     URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/live/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    raw = requests.get(URL)
+    resp = raw.json()
+    return resp[id]
+
+# parse VTVGO. Pull links from GitLab. Links have been scrapped by selenium from local computer
+# then upload to GitLab
+def parse_vtv1_5(id):
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
+    raw = requests.get(URL)
+    resp = raw.json()
+    return resp[id]
+
+# parse VTVGO. Pull links from GitLab. Links have been scrapped by selenium from local computer
+# then upload to GitLab
+def parse_vtv6_11(id):
+    URL = "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=BmbNpyZoExmdisRo1aYg"
     raw = requests.get(URL)
     resp = raw.json()
     return resp[id]

@@ -184,11 +184,20 @@ def play_link(chn, src):
         elif path == "direct":
                 full_url = checkOffLine(direct(link))
 
-        #parse using selenium 
+        #parse using selenium for thvl 
         elif path == "selenium":
                 id = data['channels'][chn]['src']['id']
                 full_url = checkOffLine(parse_thvl(id))
 
+        #parse using selenium for vtv
+        elif path == "vtv1-5":
+                id = data['channels'][chn]['src']['id']
+                full_url = checkOffLine(parse_vtv1_5(id))
+
+        #parse using selenium for vtv
+        elif path == "vtv6-11":
+                id = data['channels'][chn]['src']['id']
+                full_url = checkOffLine(parse_vtv6_11(id))
 
         #parse chunkist 
         elif path == "selenium-chunklist":
