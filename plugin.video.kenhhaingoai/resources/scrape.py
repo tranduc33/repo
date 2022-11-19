@@ -25,23 +25,47 @@ def parse_vietmedia(url):
 
 #parse vchannel
 def parse_vchannel(url):
+    session = requests.Session()
+    headers = {
+        'Connection': 'keep-alive',
+        'Cache-Control': 'max-age=0',
+        'Upgrade-Insecure-Requests': '1',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7',
+    }
+
     try:
-        res = requests.get(url)
-        videoLink = re.findall(r"playfp2\(\'(.+?)\',\'(.+?)\'", res.text)[0][1]
-        #import web_pdb; web_pdb.set_trace()
-    except:
-        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
-    else:
-        try:
-            requests.get(videoLink)
-            return videoLink
-        except:
-            return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
-        #if (requests.get(videoLink)).status_code !=  200:
-        #    return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
-        #else:
-        #    return videoLink
-    #import web_pdb; web_pdb.set_trace()
+        r = session.get(url, headers=headers)
+        p_cookies = session.cookies.get_dict()
+
+    except Exception as ex:
+        print(ex)
+        #pass
+        exit()
+
+    headers = {
+        'authority': 'vietchannels.com',
+        'pragma': 'no-cache',
+        'cache-control': 'no-cache',
+        'accept': '*/*',
+        'sec-fetch-dest': 'empty',
+        'x-requested-with': 'XMLHttpRequest',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'origin': 'https://vtvgo.vn',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-mode': 'cors',
+        
+        'accept-language': 'en-US,en;q=0.9,sv;q=0.8,vi;q=0.7',
+    }
+
+
+    response = session.post('http://www.vietchannels.com/ajax/getvid.php', headers=headers, cookies=p_cookies)
+
+    jdata = response.json()
+    return jdata['str']
 
 
 #parse lstv

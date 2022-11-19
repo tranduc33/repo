@@ -90,15 +90,15 @@
             "desc": "", 
             "title": "ABC 10 Sacramento CA (KXTV)"
         }, 
-        "cbs-palm-beach": {
+        "cbs-sc": {
             "logo": "news.png", 
             "src": {
                 "playpath": "non-scrape", 
                 "id": "cbs", 
-                "page_url": "https://content.uplynk.com/channel/0123b306191a4307a31b9fb573213fd3.m3u8"
+                "page_url": "https://livevideo01.wltx.com/hls/live/2017152/newscasts/live.m3u8"
             }, 
             "desc": "", 
-            "title": "CBS 12 West Palm Beach FL (WPEC)"
+            "title": "CBS 19 Columbia SC (WLTX)"
         }, 
         "cbs-oh": {
             "logo": "news.png", 
@@ -350,6 +350,16 @@
             "desc": "", 
             "title": "CNN"
         }, 
+        "cbs-palm-beach": {
+            "logo": "news.png", 
+            "src": {
+                "playpath": "non-scrape", 
+                "id": "cbs", 
+                "page_url": "https://content.uplynk.com/channel/0123b306191a4307a31b9fb573213fd3.m3u8"
+            }, 
+            "desc": "", 
+            "title": "CBS 12 West Palm Beach FL (WPEC)"
+        }, 
         "tbs": {
             "logo": "tbs.png", 
             "src": {
@@ -390,15 +400,15 @@
             "desc": "", 
             "title": "ON SPORTS"
         }, 
-        "cbs-sc": {
-            "logo": "news.png", 
+        "bongda": {
+            "logo": "on-sports.png", 
             "src": {
-                "playpath": "non-scrape", 
-                "id": "cbs", 
-                "page_url": "https://livevideo01.wltx.com/hls/live/2017152/newscasts/live.m3u8"
+                "playpath": "vchannel", 
+                "id": "onsports", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=437"
             }, 
             "desc": "", 
-            "title": "CBS 19 Columbia SC (WLTX)"
+            "title": "BONG DA"
         }, 
         "nbc-phoenix": {
             "logo": "news.png", 
@@ -808,7 +818,11 @@
                 }, 
                 {
                     "type": "chn", 
-                    "id": "onsports"
+                    "id": "onphim"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "bongda"
                 }, 
                 {
                     "type": "chn", 
