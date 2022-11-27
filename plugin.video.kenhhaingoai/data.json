@@ -1,5 +1,15 @@
 {
     "channels": {
+        "fifa": {
+            "logo": "wc2022.png", 
+            "src": {
+                "playpath": "fifa", 
+                "id": "wc", 
+                "page_url": "http://62.151.179.165:8088/hls/fifa.m3u8"
+            }, 
+            "desc": "", 
+            "title": "WORLD CUP 2022"
+        }, 
         "lstv": {
             "logo": "lstv.png", 
             "src": {
@@ -293,7 +303,7 @@
         "wc2022": {
             "logo": "wc2022.png", 
             "src": {
-                "playpath": "non-scrape", 
+                "playpath": "fifa", 
                 "id": "wc", 
                 "page_url": "http://168.235.110.118:8088/hls/os_stream.m3u8"
             }, 
@@ -509,6 +519,16 @@
             }, 
             "desc": "", 
             "title": "CBS News Colorado"
+        }, 
+        "test": {
+            "logo": "wc2022.png", 
+            "src": {
+                "playpath": "fifa", 
+                "id": "wc", 
+                "page_url": "http://168.235.110.118:8088/hls/os_stream.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Test"
         }, 
         "abc-va": {
             "logo": "news.png", 
@@ -774,6 +794,10 @@
     "directories": {
         "root": {
             "content": [
+                {
+                    "type": "chn", 
+                    "id": "fifa"
+                }, 
                 {
                     "type": "chn", 
                     "id": "wc2022"

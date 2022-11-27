@@ -132,7 +132,7 @@ def add_dir_link (namex):
 
 
 def play_link(chn, src):
-        data = get_json()
+        #data = get_json()
         #item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
@@ -156,6 +156,10 @@ def play_link(chn, src):
         #parse non-scrape channels
         elif playPath == "non-scrape":
                 full_url = checkOffLine(parse_noncsraped(url))
+
+        #parse fifa channels
+        elif playPath == "fifa":
+                full_url = parse_fifa(url)
 
         #parse vietsky
         elif playPath == "vietsky":
@@ -194,7 +198,9 @@ if mode == None:
         with open (datafile,"w") as f:
                 json.dump(get_key(), f, ensure_ascii=False, indent=4)
 
-data = get_json()
+#data = get_json()
+
+data = get_key()
 
 #import web_pdb; web_pdb.set_trace()
 

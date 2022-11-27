@@ -70,7 +70,7 @@ def parse_vchannel(url):
 
 #parse lstv
 def parse_lstv(url):
-    if (requests.get(url, timeout=10)).status_code !=  200:
+    if (requests.get(url, timeout=5)).status_code != 200:
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
     else:
         return url
@@ -82,6 +82,17 @@ def parse_noncsraped(url):
         return url
     else:
         return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
+#parse fifa channels
+def parse_fifa(url):
+    try:
+        resp = requests.get(url, timeout=3).status_code
+
+    except:
+        #pass
+        return "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+
+    return url
 
 #parse vietsky
 def parse_vietsky(url):
