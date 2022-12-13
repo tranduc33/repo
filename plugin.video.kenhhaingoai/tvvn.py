@@ -195,12 +195,16 @@ except: pass
         
 #get channel json object and save to file
 if mode == None:
-        with open (datafile,"w") as f:
-                json.dump(get_key(), f, ensure_ascii=False, indent=4)
+        #with open (datafile,"w") as f:
+        #        json.dump(get_key(), f, ensure_ascii=False, indent=4)
+        data = get_json()
+#verify MACID
+#get_key()
 
-#data = get_json()
+#get channel list from local storage
+data = get_json()
 
-data = get_key()
+#data = get_key()
 
 #import web_pdb; web_pdb.set_trace()
 
