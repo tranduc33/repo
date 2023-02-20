@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 #---------------------------------------------------------------------
-# File:    tvvn.py   
+# File:    tvvn.py
 # Version: 0.1.0
 # Modified By: Son Tranduc
 # Original Author: Binh Nguyen
@@ -41,10 +41,6 @@ datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhhaingoai/resources", ""))
 
-
-def get_json():
-        with open (datafile,"r") as f:
-                return json.load(f)
 
 #import web_pdb; web_pdb.set_trace()
 
@@ -132,8 +128,8 @@ def add_dir_link (namex):
 
 
 def play_link(chn, src):
-        #data = get_json()
-        #item = xbmcgui.ListItem(chn)
+        
+        item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
 
@@ -174,7 +170,7 @@ def play_link(chn, src):
 
         #import web_pdb; web_pdb.set_trace()
 
-        xbmc.Player().play(full_url)
+        xbmc.Player().play(full_url, item)
         return
 
 
@@ -190,25 +186,11 @@ except: pass
 try:         mode=int(params["mode"])
 except: pass
 
-#mode=int(params["mode"])
-#import web_pdb; web_pdb.set_trace()
-        
-#get channel json object and save to file
+
+data = get_key()
+
 if mode == None:
-        #with open (datafile,"w") as f:
-        #        json.dump(get_key(), f, ensure_ascii=False, indent=4)
-        data = get_json()
-#verify MACID
-#get_key()
-
-#get channel list from local storage
-data = get_json()
-
-#data = get_key()
-
-#import web_pdb; web_pdb.set_trace()
-
-construct_menu("root")
+        construct_menu("root")
 
 if mode==1:
         play_link(chn, src)
