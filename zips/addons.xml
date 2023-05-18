@@ -27,6 +27,33 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.kenhhaingoai.kd19"
+       name="Kênh Hải Ngoại"
+       version="1.0.0"
+       provider-name="Son Tranduc">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.t1mlib" version="4.0.1"/>
+    <import addon="script.module.web-pdb" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Kênh Hải Ngoại</summary>
+    <description lang="en_GB">Xem các kênh truyền hình Việt ngữ hải ngoại</description>
+    <disclaimer lang="en_GB">Can only watch unpaid programs</disclaimer>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+    <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon
 	id="plugin.video.kenhtrongnuoc"
 	version="2.4.1"
@@ -56,7 +83,7 @@
 
 <addon id="plugin.video.PhimBoYoutube" name="Phim Bo YouTube" version="1.1.0" provider-name="teamVIB">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="plugin.video.youtube"/>
     <import addon="script.module.web-pdb" />
   </requires>
