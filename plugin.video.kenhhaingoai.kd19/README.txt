@@ -1,8 +1,7 @@
-plugin.video.buzzr
+plugin.video.kenhhaingoai.kd19
 ================
 
-Kodi Video Addon for BUZZR TV Live
-For Kodi Matrix and above releases
+Kodi Video Addon for Kenh Hai Ngoai
+Kodi Ver. 19.04
 
-Version 4.0.0 Initial Release for Matrix
 
