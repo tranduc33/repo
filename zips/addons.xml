@@ -129,7 +129,7 @@
   </extension>
 </addon>
 
-<addon id="repository.vietipbox" name="VIB Repo" version="0.1.4" provider-name="TeamVIB">
+<addon id="repository.vietipbox" name="VIB Repo" version="0.1.5" provider-name="TeamVIB">
     <extension point="xbmc.addon.repository" name="VIB Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/tranduc33/repo/master/zips/addons.xml</info>
