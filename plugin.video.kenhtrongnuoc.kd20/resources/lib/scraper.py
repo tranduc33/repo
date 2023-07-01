@@ -70,7 +70,7 @@ class myAddon():
 
   def playLink(self, chn, title, page_url, playPath, token):
     
-    if playPath == "vtv1-5" or playPath =="vtv6-11" or playPath =="thvl" \
+    if playPath == "vtv1-5" or playPath =="vtv6-11" or playPath =="vtvgo_local" or playPath =="thvl" \
                     or playPath =="local" or playPath =="regex" or playPath == "selenium-chunklist":
       url = self.parse_gitlab(page_url, chn, token)
     elif (playPath == "hplus"):
