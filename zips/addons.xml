@@ -29,7 +29,7 @@
 
 <addon id="plugin.video.kenhhaingoai.kd20"
        name="Kênh Hải Ngoại"
-       version="1.1.0"
+       version="1.2.0"
        provider-name="Son Tranduc">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
