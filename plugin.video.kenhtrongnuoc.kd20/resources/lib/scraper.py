@@ -107,16 +107,23 @@ class myAddon():
   def parse_vchannel(self, url):
 
     # initialize a session
-    session = requests.Session()
+    #session = requests.Session()
 
-    try:
-        r = session.get(url)
-        p_cookies = session.cookies.get_dict()
-    except:
-        exit()
+    #try:
+    #    r = session.get(url)
+    #    p_cookies = session.cookies.get_dict()
+    #except:
+    #    exit()
 
-    response = session.post('http://www.vietchannels.com/ajax/getvid.php', headers=self.defaultHeaders, cookies=p_cookies)
-    return response.json()['str']
+    #response = session.post('http://www.vietchannels.com/ajax/getvid.php', headers=self.defaultHeaders, cookies=p_cookies)
+    #return response.json()['str']
+
+    #Above is old scrape
+
+    res = requests.get(url)
+    #link = re.findall(r"(http:\/\/.+?m3u8)\'\,", res.text)[0]
+    #import web_pdb; web_pdb.set_trace()
+    return re.findall(r"(http:\/\/.+?m3u8)\'\,", res.text)[0]
 
   
   
