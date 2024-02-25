@@ -88,9 +88,11 @@ class myAddon():
 
 
 
-  def playLink(self, chn, title, url, playPath):
+  def playLink(self, chn, title, url, playPath, token):
 
-    if (playPath == "tulix"):
+    if (playPath == "lstv"):
+      url = self.parse_gitlab(url, chn, token)
+    elif (playPath == "tulix"):
       url = self.parse_tulix(url)
     elif (playPath == "vietmedia"):
       url = self.parse_livestream(url)
@@ -103,8 +105,8 @@ class myAddon():
 
 
     # check if channel off live, return off-live video
-    if (requests.get(url, timeout=10)).status_code != 200:
-      url = "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
+    #if (requests.get(url, timeout=10)).status_code != 200:
+    #  url = "special://home/addons/plugin.video.kenhhaingoai/off.mp4"
 
 
     #import web_pdb; web_pdb.set_trace()
@@ -163,6 +165,11 @@ class myAddon():
     #import web_pdb; web_pdb.set_trace()
     return re.findall(r"(http:\/\/.+?m3u8)\'\,", res.text)[0]
 
+
+  def parse_gitlab(self, url, chn, token):
+
+    #import web_pdb; web_pdb.set_trace()
+    return requests.get(url+token).json()
 
   
   #get key from remote database by device MAC ID, return 0 if MAC not found
