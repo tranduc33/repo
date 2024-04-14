@@ -87,9 +87,11 @@ class myAddon():
 
   def parse_gitlab(self, url, chn, token):
 
+    resp = requests.get(url+token)
+
     #import web_pdb; web_pdb.set_trace()
 
-    return requests.get(url+token).json()[chn]
+    return resp.json()[chn]
 
 
 

@@ -83,7 +83,7 @@
 
 <addon id="plugin.video.kenhtrongnuoc.kd20"
        name="Kênh Trong Nước"
-       version="1.2.1"
+       version="1.2.2"
        provider-name="Son Tranduc">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
