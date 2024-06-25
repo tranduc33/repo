@@ -1,0 +1,777 @@
+{
+    "channels": {
+        "htv2": {
+            "logo": "htv2.png", 
+            "src": {
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv2-hd-2669.html"
+            }, 
+            "desc": "HTV2", 
+            "title": "HTV2"
+        }, 
+        "danang2": {
+            "logo": "drt2b.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "danang2", 
+                "page_url": "http://drtdnglive.e49a7c38.cdnviet.com/livestream/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh \u0110\u00e0 N\u1eb5ng 2"
+        }, 
+        "htv1": {
+            "logo": "htv1.png", 
+            "src": {
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv1-2631.html"
+            }, 
+            "desc": "HTV1", 
+            "title": "HTV1"
+        }, 
+        "htv7": {
+            "logo": "htv7.png", 
+            "src": {
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv7-hd-256.html"
+            }, 
+            "desc": "HTV7", 
+            "title": "HTV7"
+        }, 
+        "ttxvn": {
+            "logo": "ttxvn.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "ttxvn", 
+                "page_url": "https://16371213858134.vnns.net/ttxvn_abr/vtc130121/ttxvn-720p/chunks.m3u8"
+            }, 
+            "desc": "Th\u00f4ng tin, Gi\u1ea3i tr\u00ed, Th\u1ec3 thao", 
+            "title": "TTXVN"
+        }, 
+        "thbt": {
+            "logo": "thbt.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thbt", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u1ebfn Tre"
+        }, 
+        "htv9": {
+            "logo": "htv9.png", 
+            "src": {
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htv9-hd-2667.html"
+            }, 
+            "desc": "Ch\u00ednh tr\u1ecb, X\u00e3 h\u1ed9i, V\u0103n h\u00f3a", 
+            "title": "HTV9"
+        }, 
+        "thbr": {
+            "logo": "thbr.png", 
+            "src": {
+                "playpath": "local", 
+                "id": "thbr", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u00e0 R\u1ecba V\u0169ng T\u00e0u"
+        }, 
+        "thuanviet": {
+            "logo": "thuanviet.png", 
+            "src": {
+                "playpath": "hplus", 
+                "id": "hplus.vn", 
+                "page_url": "https://hplus.com.vn/xem-kenh-htvc-thuan-viet-hd-2396.html"
+            }, 
+            "desc": "", 
+            "title": "Thu\u1ea7n Vi\u1ec7t"
+        }, 
+        "thbl": {
+            "logo": "thbl.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thbl", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u1ea1c Li\u00eau"
+        }, 
+        "danang1": {
+            "logo": "drt1b.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "danang1", 
+                "page_url": "http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh \u0110\u00e0 N\u1eb5ng 1"
+        }, 
+        "vtc1": {
+            "logo": "vtc1.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "vtvgo-local", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "VTC-1"
+        }, 
+        "thdt": {
+            "logo": "thdt.png", 
+            "src": {
+                "playpath": "local", 
+                "id": "thdt", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh \u0110\u1ed3ng Th\u00e1p"
+        }, 
+        "thbg": {
+            "logo": "bgtv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thbg", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u1eafc Giang"
+        }, 
+        "thbd": {
+            "logo": "btv1.png", 
+            "src": {
+                "playpath": "regex", 
+                "id": "thbd", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/regex/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u00ecnh D\u01b0\u01a1ng"
+        }, 
+        "Vcab7": {
+            "logo": "vcab7.png", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "vcab", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=516"
+            }, 
+            "desc": "D Drama", 
+            "title": "Vcab7"
+        }, 
+        "vtv8": {
+            "logo": "vtv8.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv8", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh truy\u1ec1n h\u00ecnh T\u1ed5ng h\u1ee3p", 
+            "title": "VTV 8"
+        }, 
+        "vtv9": {
+            "logo": "vtv9.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv9", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh cho Kh\u00e1n gi\u1ea3 mi\u1ec1n Nam", 
+            "title": "VTV 9"
+        }, 
+        "style": {
+            "logo": "style.jpg", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "style", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=434"
+            }, 
+            "desc": "", 
+            "title": "Style TV"
+        }, 
+        "thdn1": {
+            "logo": "dongnai1.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thdn1", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh \u0110\u1ed3ng Nai 1"
+        }, 
+        "thhn1": {
+            "logo": "hn1.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thhn1", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh H\u00e0 N\u1ed9i 1"
+        }, 
+        "vtv1": {
+            "logo": "vtv1.png", 
+            "src": {
+                "playpath": "vtv1-5", 
+                "id": "vtv1", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "Th\u00f4ng tin t\u1ed5ng h\u1ee3p", 
+            "title": "VTV 1"
+        }, 
+        "vnews": {
+            "logo": "vnews.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "vtvgo-local", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "Truy\u1ec1n H\u00ecnh Th\u00f4ng T\u1ea5n X\u00e3 VN", 
+            "title": "VNews"
+        }, 
+        "vtv3": {
+            "logo": "vtv3.png", 
+            "src": {
+                "playpath": "vtv1-5", 
+                "id": "vtv3", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "Th\u1ec3 thao, Gi\u1ea3i tr\u00ed, Th\u00f4ng tin Kinh t\u1ebf", 
+            "title": "VTV 3"
+        }, 
+        "vtv4": {
+            "logo": "vtv4.png", 
+            "src": {
+                "playpath": "vtv1-5", 
+                "id": "vtv4", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh cho ng\u01b0\u1eddi Vi\u1ec7t Nam \u1edf n\u01b0\u1edbc ngo\u00e0i", 
+            "title": "VTV 4"
+        }, 
+        "vtv5": {
+            "logo": "vtv5.png", 
+            "src": {
+                "playpath": "vtv1-5", 
+                "id": "vtv5", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "VTV-5", 
+            "title": "VTV 5"
+        }, 
+        "vtv6": {
+            "logo": "vtv6.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv6", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh truy\u1ec1n h\u00ecnh C\u1ea7n Th\u01a1", 
+            "title": "VTV 6"
+        }, 
+        "vtv7": {
+            "logo": "vtv7.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv7", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh truy\u1ec1n h\u00ecnh Gi\u00e1o d\u1ee5c Qu\u1ed1c gia", 
+            "title": "VTV 7"
+        }, 
+        "thld": {
+            "logo": "thld.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "thld", 
+                "page_url": "http://118.107.85.5:1935/live/smil:LTV.smil/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh L\u00e2m \u0110\u1ed3ng"
+        }, 
+        "nhandan": {
+            "logo": "nhandan.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "nhandan", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Nh\u00e2n D\u00e2n TV"
+        }, 
+        "vtv-tnb": {
+            "logo": "vtv5TNB.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv-tnb", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh cho Kh\u00e1n gi\u1ea3 mi\u1ec1n T\u00e2y Nam B\u1ed9", 
+            "title": "VTV TNB"
+        }, 
+        "thst": {
+            "logo": "thst.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thst", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh S\u00f3c Tr\u0103ng"
+        }, 
+        "thvp": {
+            "logo": "vptv.jpg", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thvp", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Ph\u00fac"
+        }, 
+        "thhg": {
+            "logo": "hgtv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thhg", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh H\u1eadu Giang"
+        }, 
+        "thvl3": {
+            "logo": "thvl3.jpg", 
+            "src": {
+                "playpath": "thvl", 
+                "id": "thvl3", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/thvl/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Long 3"
+        }, 
+        "thvl2": {
+            "logo": "thvl2.jpg", 
+            "src": {
+                "playpath": "thvl", 
+                "id": "thvl2", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/thvl/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Long 2"
+        }, 
+        "thvl1": {
+            "logo": "thvl1.png", 
+            "src": {
+                "playpath": "thvl", 
+                "id": "thvl1", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/thvl/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Long 1"
+        }, 
+        "antv": {
+            "logo": "antv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "antv", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "An Ninh TV"
+        }, 
+        "thkg": {
+            "logo": "kgtv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thkg", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Ki\u00ean Giang"
+        }, 
+        "thvl4": {
+            "logo": "thvl4.jpg", 
+            "src": {
+                "playpath": "thvl", 
+                "id": "thvl4", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/thvl/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh V\u0129nh Long 4"
+        }, 
+        "thtv": {
+            "logo": "thtv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thtv", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Tr\u00e0 Vinh"
+        }, 
+        "thh": {
+            "logo": "thh.jpg", 
+            "src": {
+                "playpath": "direct", 
+                "id": "thh", 
+                "page_url": "https://live.trt.com.vn/TRT-Online/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Th\u1eeba Thi\u00ean HU\u1ebe"
+        }, 
+        "echannel": {
+            "logo": "echannel.jpg", 
+            "src": {
+                "playpath": "vchannel", 
+                "id": "style", 
+                "page_url": "http://www.vietchannels.com/watch2.php?id=430"
+            }, 
+            "desc": "", 
+            "title": "E Channel"
+        }, 
+        "thbthuan": {
+            "logo": "thbthuan.jpg", 
+            "src": {
+                "playpath": "local", 
+                "id": "thbthuan", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh B\u00ecnh Thu\u1eadn"
+        }, 
+        "thct": {
+            "logo": "thct.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thct", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh C\u1ea7n Th\u01a1"
+        }, 
+        "thtn": {
+            "logo": "thtn.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thtn", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh T\u00e2y Ninh"
+        }, 
+        "thhn2": {
+            "logo": "hn2.jpg", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thhn2", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh H\u00e0 N\u1ed9i 2"
+        }, 
+        "thag": {
+            "logo": "agtv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thkg", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh An Giang"
+        }, 
+        "thtg": {
+            "logo": "thtg.jpg", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "thtg", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Ti\u1ec1n Giang"
+        }, 
+        "vtv-tn": {
+            "logo": "vtv-tn.png", 
+            "src": {
+                "playpath": "vtv6-11", 
+                "id": "vtv-tn", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv6-11/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "K\u00eanh cho Kh\u00e1n gi\u1ea3 mi\u1ec1n T\u00e2y Nguy\u00ean", 
+            "title": "VTV TN"
+        }, 
+        "la34": {
+            "logo": "la34.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "ktv", 
+                "page_url": "https://la34.vncdn.vn/live/LA34AAA/playlist.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Long An"
+        }, 
+        "ktv": {
+            "logo": "ktv.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "ktv", 
+                "page_url": "http://210.245.20.94/hls/ktv1.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Kh\u00e1nh H\u00f2a"
+        }, 
+        "thqn": {
+            "logo": "thqn.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "thqn", 
+                "page_url": "http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Qu\u1ea3ng Nam"
+        }, 
+        "qhtv": {
+            "logo": "qhtv.jpg", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "qhtv", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Qu\u1ed1c H\u1ed9i TV"
+        }, 
+        "qpvn": {
+            "logo": "qpvn.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "qpvn", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Qu\u1ed1c Ph\u00f2ng VN"
+        }, 
+        "thcm": {
+            "logo": "thcm.png", 
+            "src": {
+                "playpath": "direct", 
+                "id": "thcm", 
+                "page_url": "http://tv.ctvcamau.vn/live/tv/tv.m3u8"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh C\u00e0 Mau"
+        }, 
+        "qntv": {
+            "logo": "qntv.png", 
+            "src": {
+                "playpath": "vtvgo_local", 
+                "id": "qntv", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtvgo_local/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "", 
+            "title": "Truy\u1ec1n H\u00ecnh Qu\u1ea3ng Ninh"
+        }, 
+        "vtv2": {
+            "logo": "vtv2.png", 
+            "src": {
+                "playpath": "vtv1-5", 
+                "id": "vtv2", 
+                "page_url": "https://gitlab.com/api/v4/projects/teamVIB%2Flive/repository/files/vtv1-5/raw?ref=master&private_token=glpat-GophsHMAuGPS452D8SVa"
+            }, 
+            "desc": "Khoa h\u1ecdc, Gi\u00e1o d\u1ee5c", 
+            "title": "VTV 2"
+        }
+    }, 
+    "directories": {
+        "root": {
+            "content": [
+                {
+                    "type": "chn", 
+                    "id": "vtv1"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv2"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv3"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv4"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv5"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv6"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv7"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv8"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv9"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv-tnb"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtv-tn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "style"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "Vcab7"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vnews"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "vtc1"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "nhandan"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "antv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "qpvn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "qhtv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thdn1"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thdt"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbd"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbr"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thct"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thtv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thtg"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thkg"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thhg"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thag"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbt"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thcm"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbthuan"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thst"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbl"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thh"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "danang1"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "danang2"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "ktv"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thld"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thqn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thtn"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thhn1"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thhn2"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thbg"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "thvp"
+                }, 
+                {
+                    "type": "chn", 
+                    "id": "qntv"
+                }
+            ], 
+            "logo": "", 
+            "desc": "root menu", 
+            "title": "root"
+        }
+    }
+}
