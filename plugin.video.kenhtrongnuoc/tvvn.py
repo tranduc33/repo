@@ -42,10 +42,7 @@ datafile = xbmc.translatePath(os.path.join(home, 'data.json'))
 jsonPath = xbmc.translatePath(os.path.join("special://home/addons/plugin.video.kenhtrongnuoc/resources", ""))
 
 
-# retrieve channel list object from file
-def get_json():
-        with open (datafile,"r") as f:
-                return json.load(f)
+data = get_key()
 
 
 def get_params():
@@ -146,31 +143,16 @@ def add_dir_link (namex):
 
 def play_link(chn, src):
         path = data['channels'][chn]['src']['playpath']
-        link = data['channels'][chn]['src']['page_url']
+        page_url = data['channels'][chn]['src']['page_url']
         item = xbmcgui.ListItem(chn)
         d_progress = xbmcgui.DialogProgress()
         d_progress.create("Please wait ...", addon.getLocalizedString(30009))
-        #cj = CookieJar()
-        #opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
-        #parse tvnet
-        if path == "m3u8_tvnet":
-                full_url = checkOffLine(parse_tvnet(link))
-
-        #parse vtvgo
-        elif path == "m3u8_vtvgo":
-                #url = data['channels'][chn]['src']['page_url']
-                full_url = parse_vtvgo(link)
-                #import web_pdb; web_pdb.set_trace()
-
-        #parse https://now.vtc.vn/
-        elif (path == "vtc") or (path == "m3u8"):
-                link = data['channels'][chn]['src']['page_url']
-                full_url = checkOffLine(link)
+        #import web_pdb; web_pdb.set_trace()
 
         #parse vchannel
-        elif path == "vchannel":
-                full_url = checkOffLine(parse_vchannel(link))
+        if path == "vchannel":
+                full_url = parse_vchannel(page_url)
 
         #parse vcab7
         elif path == "vcab7":
@@ -184,39 +166,13 @@ def play_link(chn, src):
         elif path == "direct":
                 full_url = checkOffLine(direct(link))
 
-        #parse using selenium for thvl 
-        elif path == "thvl":
-                id = data['channels'][chn]['src']['id']
-                full_url = checkOffLine(parse_thvl(id))
 
-        #parse using selenium for local 
-        elif path == "local":
-                id = data['channels'][chn]['src']['id']
-                full_url = checkOffLine(parse_local(id))
-
-        #parse using regex for local 
-        elif path == "regex":
-                id = data['channels'][chn]['src']['id']
-                full_url = checkOffLine(parse_regex(id))
-
-        #parse using selenium for vtv
-        elif path == "vtv1-5":
-                id = data['channels'][chn]['src']['id']
-                full_url = checkOffLine(parse_vtv1_5(id))
-
-        #parse using selenium for vtv
-        elif path == "vtv6-11":
-                id = data['channels'][chn]['src']['id']
-                full_url = checkOffLine(parse_vtv6_11(id))
-
-        #parse chunkist 
-        elif path == "selenium-chunklist":
-                id = data['channels'][chn]['src']['id']
-                full_url = parse_for_chunklist_from_gitlab(id)
+        #parse vtvgo from Gitlab 
+        elif path == "vtv1-5" or path == "vtv6-11" or path == "vtvgo_local" or path == "regex" \
+                        or path == "local" :
+                full_url = parse_gitlab(page_url, chn)
 
 
-
-        #else: full_url = "special://home/addons/plugin.video.kenhtrongnuoc/off.mp4"
 
         d_progress.close()
 
@@ -225,6 +181,9 @@ def play_link(chn, src):
 
         #ok = xbmc.Player().play(full_url)
         return xbmc.Player().play(full_url)
+
+
+
 
 mode=None
 params=get_params()
@@ -237,13 +196,11 @@ try:         mode=int(params["mode"])
 except: pass
 
 
-        
-#get channel list in json and save to file
-if mode == None:
-        with open (datafile,"w") as f:
-                json.dump(get_key(), f, ensure_ascii=True, indent=4)
 
-data = get_json()
+
+
+#import web_pdb; web_pdb.set_trace()
+
 
 construct_menu("root")
 if mode==1:
