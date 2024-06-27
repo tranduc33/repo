@@ -147,7 +147,7 @@ def play_link(chn, src):
 
         #parse lstv
         elif playPath == "lstv":
-                full_url = checkOffLine(parse_lstv(url))
+                full_url = parse_gitlab(url, chn)
 
         #parse non-scrape channels
         elif playPath == "non-scrape":
