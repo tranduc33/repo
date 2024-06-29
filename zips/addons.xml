@@ -2,7 +2,7 @@
 <addons>
 <addon
 	id="plugin.video.kenhtrongnuoc"
-	version="2.6.0"
+	version="2.6.1"
 	name="Truyen Hinh Trong Nuoc"
 	provider-name="VIB team">
 	<requires>
@@ -29,7 +29,7 @@
 
 <addon
 	id="plugin.video.kenhhaingoai"
-	version="2.5.0"
+	version="2.5.1"
 	name="Truyen Hinh Hai Ngoai"
 	provider-name="Son Tranduc">
 	<requires>
@@ -129,7 +129,7 @@
   </extension>
 </addon>
 
-<addon id="repository.vietipbox" name="VIB Repo" version="1.6.0" provider-name="TeamVIB">
+<addon id="repository.vietipbox" name="VIB Repo" version="1.6.1" provider-name="TeamVIB">
     <extension point="xbmc.addon.repository" name="VIB Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/tranduc33/repo/master/zips/addons.xml</info>
