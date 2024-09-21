@@ -81,6 +81,33 @@
   </extension>
 </addon>
 
+<addon
+	id="plugin.video.kenhtrongnuoc"
+	version="2.5"
+	name="Truyen Hinh Trong Nuoc"
+	provider-name="VIB team">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import version="1.11.0" addon="script.module.six"/>
+		<import version="2.12.4" addon="script.module.requests"/>
+		<import addon="script.module.web-pdb" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="tvvn.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<language>en vi</language>
+		<summary lang="en_GB">Truyền Hình Trong Nước</summary>
+		<summary lang="vi"></summary>
+		<description lang="en_GB">This plugin allows you to watch live FREE TV channels from Viet Nam</description>
+		<description lang="vi">Xem trực tiếp các kênh truyền hình từ Việt Nam.</description>
+		<disclaimer lang="en_GB">All live streams are pulled from online providers and in no way represent my views or opinions</disclaimer>
+		<disclaimer lang="vi">Tất cả live streams được tải về từ các nhà cung cấp dịch vụ. Tác giả phần mềm này không chịu trách nhiệm về nội dung của chúng.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	</extension>
+</addon>
+
 <addon id="plugin.video.kenhtrongnuoc.kd20"
        name="Kênh Trong Nước"
        version="2.1.2"
@@ -108,28 +135,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.PhimBoYoutube" name="Phim Bo YouTube" version="1.1.0" provider-name="teamVIB">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="plugin.video.youtube"/>
-    <import addon="script.module.web-pdb" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <language>en</language>
-    <summary lang="en">Xem Phim Bo Youtube</summary>
-    <description lang="en">Xem hàng chục ngàn phim bộ được ngữ sang tiếng Việt. Nguồn từ YouTube
-	</description>
-    <disclaimer lang="en">
-    	[COLOR red]Thank you to TVADDONS[/COLOR]
-    </disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="repository.vietipbox" name="VIB Repo" version="1.6.1" provider-name="TeamVIB">
+<addon id="repository.vietipbox" name="VIB Repo" version="1.7.0" provider-name="TeamVIB">
     <extension point="xbmc.addon.repository" name="VIB Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/tranduc33/repo/master/zips/addons.xml</info>
