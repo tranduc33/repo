@@ -21,6 +21,9 @@ try:
 except:
   import simplejson as json
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(current_dir, 'trongnuoc.json')
+
 
 USERAGENT = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
 httpHeaders = {'User-Agent': USERAGENT,
@@ -134,19 +137,22 @@ class myAddon():
   def get_key(self):
 
     # API endpoint
-    url = "https://vietipbox.com/box-api/getChannelList.php"
+    #url = "https://vietipbox.com/box-api/getChannelList.php"
     
     # retrieve device's mac id
-    mac_value = '%012x' % uuid.getnode()
+    #mac_value = '%012x' % uuid.getnode()
     #mac_value = "18cc18d9574b"
-    payload = {
-      "macid": mac_value,
-      "service": "trongnuoc"
-      }
+    #payload = {
+    #  "macid": mac_value,
+    #  "service": "trongnuoc"
+    #  }
     #import web_pdb; web_pdb.set_trace()
-    try:
-      return (requests.get(url, params = payload)).json()
-    except:
-      dialog = xbmcgui.Dialog()
-      dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
-      sys.exit()
+    #try:
+    #  return (requests.get(url, params = payload)).json()
+    #except:
+    #  dialog = xbmcgui.Dialog()
+    #  dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
+    #  sys.exit()
+    with open(file_path,"r", encoding="utf-8") as f:
+      data = json.load(f)
+    return data
