@@ -137,22 +137,24 @@ class myAddon():
   def get_key(self):
 
     # API endpoint
-    #url = "https://vietipbox.com/box-api/getChannelList.php"
+    url = "https://vietipbox.com/box-api/getChannelList.php"
     
     # retrieve device's mac id
-    #mac_value = '%012x' % uuid.getnode()
+    mac_value = '%012x' % uuid.getnode()
     #mac_value = "18cc18d9574b"
-    #payload = {
-    #  "macid": mac_value,
-    #  "service": "trongnuoc"
-    #  }
+    payload = {
+      "macid": mac_value,
+      "service": "trongnuoc"
+      }
     #import web_pdb; web_pdb.set_trace()
-    #try:
-    #  return (requests.get(url, params = payload)).json()
-    #except:
-    #  dialog = xbmcgui.Dialog()
-    #  dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
-    #  sys.exit()
-    with open(file_path,"r", encoding="utf-8") as f:
-      data = json.load(f)
-    return data
+    try:
+      return (requests.get(url, params = payload)).json()
+    except:
+      dialog = xbmcgui.Dialog()
+      dialog.textviewer("Warning!", "Unauthorized Device, Your MAC id:  "+mac_value)
+      sys.exit()
+    
+    # read local json
+    #with open(file_path,"r", encoding="utf-8") as f:
+    #  data = json.load(f)
+    #return data
