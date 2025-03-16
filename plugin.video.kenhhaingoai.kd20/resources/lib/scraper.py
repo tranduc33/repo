@@ -141,7 +141,7 @@ class myAddon():
   def parse_vietsky(self, url):
     
     res = requests.get(url)
-    return re.findall(r"(http:\/\/.+?m3u8)\"", res.text)[0]
+    return re.findall(r"(https:\/\/.+?m3u8)", res.text)[0]
 
   
   
@@ -161,9 +161,10 @@ class myAddon():
     #return response.json()['str']
 
     # Above is old scrape
+    #import web_pdb; web_pdb.set_trace()
 
     res = requests.get(url)
-    link = re.findall(r"(http:\/\/.+?m3u8)\'", res.text)[0]
+    link = re.findall(r",\'(https:\/\/.+?m3u8)", res.text)[0]
     #import web_pdb; web_pdb.set_trace()
     return link
 
