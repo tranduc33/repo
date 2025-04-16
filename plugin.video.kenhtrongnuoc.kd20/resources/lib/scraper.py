@@ -128,7 +128,7 @@ class myAddon():
     res = requests.get(url)
     #link = re.findall(r"(http:\/\/.+?m3u8)\'\,", res.text)[0]
     #import web_pdb; web_pdb.set_trace()
-    return re.findall(r"(http:\/\/.+?m3u8)\'\,", res.text)[0]
+    return re.findall(r",\'(https:\/\/.+?m3u8.+?)\'\,", res.text)[0]
 
   
   
