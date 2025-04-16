@@ -164,7 +164,7 @@ class myAddon():
     #import web_pdb; web_pdb.set_trace()
 
     res = requests.get(url)
-    link = re.findall(r",\'(https:\/\/.+?m3u8)", res.text)[0]
+    link = re.findall(r",\'(https:\/\/.+?m3u8.+?)\'\,", res.text)[0]
     #import web_pdb; web_pdb.set_trace()
     return link
 
